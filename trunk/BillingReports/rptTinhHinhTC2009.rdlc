@@ -10,25 +10,6 @@
     </DataSource>
   </DataSources>
   <InteractiveHeight>30cm</InteractiveHeight>
-  <ReportParameters>
-    <ReportParameter Name="NgayLap">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>NgayLap</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="DenNgay">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>DenNgay</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="Thang">
-      <DataType>Integer</DataType>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>Thang</Prompt>
-    </ReportParameter>
-  </ReportParameters>
   <rd:DrawGrid>true</rd:DrawGrid>
   <InteractiveWidth>21.5cm</InteractiveWidth>
   <rd:GridSpacing>0.25cm</rd:GridSpacing>
@@ -277,8 +258,24 @@
   <Body>
     <ColumnSpacing>0.5cm</ColumnSpacing>
     <ReportItems>
+      <Textbox Name="textbox33">
+        <Top>3cm</Top>
+        <Width>13cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>15</ZIndex>
+        <Left>2cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>(Ban hành kèm theo văn bản số: 74/KTTKTC ngày 11 tháng 01 năm 2010)</Value>
+      </Textbox>
       <Table Name="table1">
-        <ZIndex>18</ZIndex>
+        <ZIndex>14</ZIndex>
         <DataSetName>BRDataSet_dsBaoCaoTuan</DataSetName>
         <Top>4cm</Top>
         <Width>6.10313in</Width>
@@ -903,7 +900,7 @@
         <Height>4.15476cm</Height>
       </Table>
       <Table Name="table4">
-        <ZIndex>17</ZIndex>
+        <ZIndex>13</ZIndex>
         <DataSetName>BRDataSet_dsBaoCaoTuan11</DataSetName>
         <Top>8.34126cm</Top>
         <Width>6.10313in</Width>
@@ -1157,7 +1154,7 @@
         <Height>1.26984cm</Height>
       </Table>
       <Table Name="table3">
-        <ZIndex>16</ZIndex>
+        <ZIndex>12</ZIndex>
         <DataSetName>BRDataSet_dsBaoCaoTuan1</DataSetName>
         <Top>8.15608cm</Top>
         <Width>6.10313in</Width>
@@ -1860,7 +1857,7 @@
         <Height>3.80952cm</Height>
       </Table>
       <Table Name="table2">
-        <ZIndex>15</ZIndex>
+        <ZIndex>11</ZIndex>
         <DataSetName>BRDataSet_dsBaoCaoTuan1</DataSetName>
         <Filters>
           <Filter>
@@ -2232,23 +2229,6 @@
         </TableColumns>
         <Height>1.90476cm</Height>
       </Table>
-      <Textbox Name="textbox35">
-        <Top>2.30291cm</Top>
-        <Width>1cm</Width>
-        <Style>
-          <FontSize>8pt</FontSize>
-          <FontWeight>700</FontWeight>
-          <TextAlign>Center</TextAlign>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-        <ZIndex>14</ZIndex>
-        <Left>8.52645cm</Left>
-        <Height>0.63492cm</Height>
-        <Value>đến</Value>
-      </Textbox>
       <Textbox Name="textbox15">
         <Top>0.125cm</Top>
         <Width>7.25cm</Width>
@@ -2261,7 +2241,7 @@
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
-        <ZIndex>13</ZIndex>
+        <ZIndex>10</ZIndex>
         <CanGrow>true</CanGrow>
         <Height>0.625cm</Height>
         <Value>Tập đoàn Bưu chính viễn thông Việt Nam</Value>
@@ -2278,28 +2258,11 @@
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
-        <ZIndex>12</ZIndex>
+        <ZIndex>9</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>0.00001cm</Left>
         <Height>0.63492cm</Height>
-        <Value>BÁO CÁO TÌNH HÌNH THU CƯỚC SỬ DỤNG DỊCH VỤ VIỄN THÔNG CỦA KHÁCH HÀNG TUẦN TỪ NGÀY</Value>
-      </Textbox>
-      <Textbox Name="textbox6">
-        <rd:DefaultName>textbox6</rd:DefaultName>
-        <Top>2.30291cm</Top>
-        <Width>2.9881cm</Width>
-        <Style>
-          <FontStyle>Italic</FontStyle>
-          <FontSize>8pt</FontSize>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-        <ZIndex>11</ZIndex>
-        <Left>9.52646cm</Left>
-        <Height>0.63492cm</Height>
-        <Value>=Parameters!DenNgay.Value</Value>
+        <Value>BÁO CÁO TÌNH HÌNH THU CƯỚC SỬ DỤNG DỊCH VỤ VIỄN THÔNG CỦA KHÁCH HÀNG</Value>
       </Textbox>
       <Textbox Name="textbox31">
         <Top>0.75cm</Top>
@@ -2313,7 +2276,7 @@
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
-        <ZIndex>10</ZIndex>
+        <ZIndex>8</ZIndex>
         <CanGrow>true</CanGrow>
         <Height>0.69709cm</Height>
         <Value>Viễn thông tỉnh Bình Dương</Value>
@@ -2329,26 +2292,10 @@
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
-        <ZIndex>9</ZIndex>
-        <Left>4.60582cm</Left>
+        <ZIndex>7</ZIndex>
+        <Left>7.5cm</Left>
         <Height>0.63492cm</Height>
-        <Value>Từ ngày</Value>
-      </Textbox>
-      <Textbox Name="textbox8">
-        <Top>2.30291cm</Top>
-        <Width>2.27645cm</Width>
-        <Style>
-          <FontStyle>Italic</FontStyle>
-          <FontSize>8pt</FontSize>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-        <ZIndex>8</ZIndex>
-        <Left>6.25cm</Left>
-        <Height>0.63492cm</Height>
-        <Value>=Parameters!NgayLap.Value</Value>
+        <Value>Năm 2009</Value>
       </Textbox>
       <Textbox Name="textbox3">
         <Top>13.26456cm</Top>
@@ -2362,7 +2309,7 @@
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
-        <ZIndex>7</ZIndex>
+        <ZIndex>6</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>0.00133cm</Left>
         <Height>0.63492cm</Height>
@@ -2380,7 +2327,7 @@
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
-        <ZIndex>6</ZIndex>
+        <ZIndex>5</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>4.25cm</Left>
         <Height>0.63492cm</Height>
@@ -2397,7 +2344,7 @@
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
-        <ZIndex>5</ZIndex>
+        <ZIndex>4</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>8cm</Left>
         <Height>0.63492cm</Height>
@@ -2415,7 +2362,7 @@
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
-        <ZIndex>4</ZIndex>
+        <ZIndex>3</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>8.25cm</Left>
         <Height>0.63492cm</Height>
@@ -2433,7 +2380,7 @@
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
-        <ZIndex>3</ZIndex>
+        <ZIndex>2</ZIndex>
         <CanGrow>true</CanGrow>
         <Height>0.63492cm</Height>
         <Value>(Ký, ghi rõ họ tên)</Value>
@@ -2450,7 +2397,7 @@
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
-        <ZIndex>2</ZIndex>
+        <ZIndex>1</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>3.71428cm</Left>
         <Height>0.63492cm</Height>
@@ -2468,26 +2415,10 @@
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
-        <ZIndex>1</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>10.5cm</Left>
         <Height>0.63492cm</Height>
         <Value>(Ký, ghi rõ họ tên)</Value>
-      </Textbox>
-      <Textbox Name="textbox33">
-        <Top>2.98809cm</Top>
-        <Width>13cm</Width>
-        <Style>
-          <FontSize>8pt</FontSize>
-          <TextAlign>Center</TextAlign>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-        <Left>2.5cm</Left>
-        <Height>0.63492cm</Height>
-        <Value>(Ban hành kèm theo văn bản số: 3049/VNPT-KTTKTC ngày 02 tháng 08 năm 2009)</Value>
       </Textbox>
     </ReportItems>
     <Height>14.75cm</Height>
