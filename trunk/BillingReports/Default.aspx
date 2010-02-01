@@ -31,16 +31,16 @@
             <td>
             </td>
             <td>
-                &nbsp;<asp:RadioButton ID="rbBaoCao2009" runat="server" Text="Báo cáo năm 2009" GroupName="Baocao"
+                <asp:RadioButton ID="rbBaoCao2009" runat="server" Text="Báo cáo năm 2009" GroupName="Baocao"
                     oncheckedchanged="RadioButton1_CheckedChanged" />
             </td>        
         </tr>
              
          <tr>
             <td>
-                &nbsp;</td>
+                </td>
             <td>
-                &nbsp;<asp:RadioButton ID="rbBaoCaoTuan2009" runat="server" 
+                <asp:RadioButton ID="rbBaoCaoTuan2009" runat="server" 
                     Text="Báo cáo tuần trong năm 2009" GroupName="Baocao"
                     oncheckedchanged="RadioButton1_CheckedChanged" />
             </td>        

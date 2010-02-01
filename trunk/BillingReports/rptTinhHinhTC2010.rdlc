@@ -954,8 +954,8 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(Sum(Fields!DauKy.Value, "BRDataSet_dsBaoCaoTuan_Tong")
-+Sum(Fields!PhatSinh.Value, "BRDataSet_dsBaoCaoTuan_Tong")
+                      <Value>=formatnumber(Sum(Fields!DauKy.Value, "BRDataSet_dsBaoCaoTuan_Tong")+Sum(Fields!DauKy1.Value, "BRDataSet_dsBaoCaoTuan_Tong")
++Sum(Fields!PhatSinh.Value, "BRDataSet_dsBaoCaoTuan_Tong")+Sum(Fields!PhatSinh1.Value, "BRDataSet_dsBaoCaoTuan_Tong")
 -Sum(Fields!DaTra.Value, "BRDataSet_dsBaoCaoTuan_Tong")-Sum(Fields!DaTra1.Value, "BRDataSet_dsBaoCaoTuan_Tong"),0).Replace(",",".")</Value>
                     </Textbox>
                   </ReportItems>
@@ -1078,7 +1078,7 @@
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="textbox16">
+                    <Textbox Name="textbox8">
                       <Style>
                         <BackgroundColor>White</BackgroundColor>
                         <BorderStyle>
@@ -1093,8 +1093,9 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(Sum(Fields!PhatSinh1.Value+Fields!PhatSinh.Value+Fields!DauKy.Value+Fields!DauKy1.Value-Fields!DaTra.Value-Fields!DaTra1.Value, "BRDataSet_dsBaoCaoTuan_Tong")
-,0).Replace(",",".")</Value>
+                      <Value>=formatnumber(Sum(Fields!DauKy.Value, "BRDataSet_dsBaoCaoTuan_Tong")+Sum(Fields!DauKy1.Value, "BRDataSet_dsBaoCaoTuan_Tong")
++Sum(Fields!PhatSinh.Value, "BRDataSet_dsBaoCaoTuan_Tong")+Sum(Fields!PhatSinh1.Value, "BRDataSet_dsBaoCaoTuan_Tong")
+-Sum(Fields!DaTra.Value, "BRDataSet_dsBaoCaoTuan_Tong")-Sum(Fields!DaTra1.Value, "BRDataSet_dsBaoCaoTuan_Tong"),0).Replace(",",".")</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
