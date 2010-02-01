@@ -10,6 +10,13 @@
     </DataSource>
   </DataSources>
   <InteractiveHeight>30cm</InteractiveHeight>
+  <ReportParameters>
+    <ReportParameter Name="Thang">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Thang</Prompt>
+    </ReportParameter>
+  </ReportParameters>
   <rd:DrawGrid>true</rd:DrawGrid>
   <InteractiveWidth>21.5cm</InteractiveWidth>
   <rd:GridSpacing>0.25cm</rd:GridSpacing>
