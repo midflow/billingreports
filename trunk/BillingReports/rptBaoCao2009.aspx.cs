@@ -105,12 +105,12 @@ public partial class rptBaoCao2009 : System.Web.UI.Page
         rptBaoCaoTuan1.LocalReport.DataSources.Add(rds);
         odPLCT.Close();
 
-        ReportParameter[] rppDate = new ReportParameter[3];
-        rppDate[0] = new ReportParameter("NgayLap", Convert.ToDateTime(Request.Params["NgayThang"]).ToString("dd/MM/yyyy"));
-        rppDate[1] = new ReportParameter("DenNgay", Convert.ToDateTime(Request.Params["ToiNgay"]).ToString("dd/MM/yyyy"));
-        rppDate[2] = new ReportParameter("Thang", Convert.ToDateTime(Request.Params["ToiNgay"].ToString(), vn).AddMonths(-1).ToString("MM"));
+        //ReportParameter[] rppDate = new ReportParameter[1];
+        //rppDate[0] = new ReportParameter("NgayLap", Convert.ToDateTime(Request.Params["NgayThang"]).ToString("dd/MM/yyyy"));
+        //rppDate[1] = new ReportParameter("DenNgay", Convert.ToDateTime(Request.Params["ToiNgay"]).ToString("dd/MM/yyyy"));
+        //rppDate[0] = new ReportParameter("Thang", Convert.ToDateTime(Request.Params["ToiNgay"].ToString(), vn).AddMonths(-1).ToString("MM"));
         
-        rptBaoCaoTuan1.LocalReport.SetParameters(rppDate);
+        //rptBaoCaoTuan1.LocalReport.SetParameters(rppDate);
         rptBaoCaoTuan1.LocalReport.Refresh();
 
     }
