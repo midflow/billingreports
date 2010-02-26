@@ -26,14 +26,14 @@
                 </td>
                 <td align="right" width="100px">
                     <cc2:DaintyDate ID="ddIdentifyIssueDate" runat="server" FormatType="dd/MM/yyyy" 
-                        SelectedDate="01/28/2010 15:17:50" />
+                        />
                 </td>
                 <td align="center" width="100px">
                     Đến
                 </td>
                 <td>
                     <cc2:DaintyDate ID="ddIdentifyIssueToDate" runat="server" 
-                        FormatType="dd/MM/yyyy" SelectedDate="01/28/2010 15:18:00" />
+                        FormatType="dd/MM/yyyy"/>
                 </td>
             </tr>
             <tr>

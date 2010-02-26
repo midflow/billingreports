@@ -35,13 +35,17 @@ public partial class rptBaoCaoTuan : System.Web.UI.Page
         //string strTinhTong = "TinhTongTheoTuoiNo";
 
         string strphanloaiCT = "select * from tblbctuan where type=1 and cast(tungay as datetime)='" +
-            Convert.ToDateTime(Request.Params["NgayThang"].ToString(), vn).ToString("dd MMM yyyy") + "'"; 
+            Convert.ToDateTime(Request.Params["NgayThang"].ToString(), vn).ToString("dd MMM yyyy") + "'  and cast(denngay as datetime)='" +
+            Convert.ToDateTime(Request.Params["Toingay"].ToString()).ToString("dd MMM yyyy") + "'"; 
         string strNam2009 = "select * from tblbctuan where type=2 and cast(tungay as datetime)='" +
-            Convert.ToDateTime(Request.Params["NgayThang"].ToString(), vn).ToString("dd MMM yyyy") + "'";  
+            Convert.ToDateTime(Request.Params["NgayThang"].ToString(), vn).ToString("dd MMM yyyy") + "'  and cast(denngay as datetime)='" +
+            Convert.ToDateTime(Request.Params["Toingay"].ToString()).ToString("dd MMM yyyy") + "'";  
         string strDoituong = "select * from tblbctuan where type=3 and cast(tungay as datetime)='" +
-            Convert.ToDateTime(Request.Params["NgayThang"].ToString(), vn).ToString("dd MMM yyyy") + "'"; 
+            Convert.ToDateTime(Request.Params["NgayThang"].ToString(), vn).ToString("dd MMM yyyy") + "'  and cast(denngay as datetime)='" +
+            Convert.ToDateTime(Request.Params["Toingay"].ToString()).ToString("dd MMM yyyy") + "'"; 
         string strTinhTong = "select * from tblbctuan where type=0 and cast(tungay as datetime)='" +
-            Convert.ToDateTime(Request.Params["NgayThang"].ToString(), vn).ToString("dd MMM yyyy") + "'"; 
+            Convert.ToDateTime(Request.Params["NgayThang"].ToString(), vn).ToString("dd MMM yyyy") + "'  and cast(denngay as datetime)='" +
+            Convert.ToDateTime(Request.Params["Toingay"].ToString()).ToString("dd MMM yyyy") + "'"; 
         
         SqlCommand cmdPLCT = new SqlCommand(strphanloaiCT);
         cmdPLCT.Connection = con;

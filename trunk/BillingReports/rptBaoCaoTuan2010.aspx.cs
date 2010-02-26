@@ -35,14 +35,18 @@ public partial class rptBaoCaoTuan2010 : System.Web.UI.Page
         //string strTinhTong = "TinhTongTheoTuoiNo";
 
         string strphanloaiCT = "select * from tblbctuan where type=1 and cast(tungay as datetime)='" +
-            Convert.ToDateTime(Request.Params["NgayThang"].ToString()).ToString("dd MMM yyyy") + "'"; 
+            Convert.ToDateTime(Request.Params["NgayThang"].ToString()).ToString("dd MMM yyyy") + "'  and cast(denngay as datetime)='" +
+            Convert.ToDateTime(Request.Params["Toingay"].ToString()).ToString("dd MMM yyyy") + "'"; 
             //Convert.ToDateTime(Request.Params["NgayThang"].ToString(), vn).ToString("dd MMM yyyy") + "'"; 
         string strNam2010 = "select * from tblbctuan where type=2 and cast(tungay as datetime)='" +
-            Convert.ToDateTime(Request.Params["NgayThang"].ToString(), vn).ToString("dd MMM yyyy") + "'";  
+            Convert.ToDateTime(Request.Params["NgayThang"].ToString(), vn).ToString("dd MMM yyyy") + "'  and cast(denngay as datetime)='" +
+            Convert.ToDateTime(Request.Params["Toingay"].ToString()).ToString("dd MMM yyyy") + "'";  
         string strDoituong = "select * from tblbctuan where type=3 and cast(tungay as datetime)='" +
-            Convert.ToDateTime(Request.Params["NgayThang"].ToString(), vn).ToString("dd MMM yyyy") + "'"; 
+            Convert.ToDateTime(Request.Params["NgayThang"].ToString(), vn).ToString("dd MMM yyyy") + "'  and cast(denngay as datetime)='" +
+            Convert.ToDateTime(Request.Params["Toingay"].ToString()).ToString("dd MMM yyyy") + "'"; 
         string strTinhTong = "select * from tblbctuan where type=0 and cast(tungay as datetime)='" +
-            Convert.ToDateTime(Request.Params["NgayThang"].ToString(), vn).ToString("dd MMM yyyy") + "'"; 
+            Convert.ToDateTime(Request.Params["NgayThang"].ToString(), vn).ToString("dd MMM yyyy") + "'  and cast(denngay as datetime)='" +
+            Convert.ToDateTime(Request.Params["Toingay"].ToString()).ToString("dd MMM yyyy") + "'"; 
         
         SqlCommand cmdPLCT = new SqlCommand(strphanloaiCT);
         cmdPLCT.Connection = con;
@@ -110,10 +114,10 @@ public partial class rptBaoCaoTuan2010 : System.Web.UI.Page
         rptBaoCaoTuan1.LocalReport.DataSources.Add(rds);
         odPLCT.Close();
 
-        ReportParameter[] rppDate = new ReportParameter[2];
+        ReportParameter[] rppDate = new ReportParameter[3];
         rppDate[0] = new ReportParameter("NgayLap", Convert.ToDateTime(Request.Params["NgayThang"]).ToString("dd/MM/yyyy"));
-        //rppDate[1] = new ReportParameter("DenNgay", Convert.ToDateTime(Request.Params["ToiNgay"]).ToString("dd/MM/yyyy"));
-        rppDate[1] = new ReportParameter("Thang", Convert.ToDateTime(Request.Params["ToiNgay"].ToString(), vn).AddMonths(-1).ToString("MM"));
+        rppDate[1] = new ReportParameter("Denngay", Convert.ToDateTime(Request.Params["ToiNgay"]).ToString("dd/MM/yyyy"));
+        rppDate[2] = new ReportParameter("Thang", Convert.ToDateTime(Request.Params["ToiNgay"].ToString(), vn).AddMonths(-1).ToString("MM"));
         
         rptBaoCaoTuan1.LocalReport.SetParameters(rppDate);
         rptBaoCaoTuan1.LocalReport.Refresh();
