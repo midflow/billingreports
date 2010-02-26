@@ -16,6 +16,11 @@
       <AllowBlank>true</AllowBlank>
       <Prompt>NgayLap</Prompt>
     </ReportParameter>
+    <ReportParameter Name="Denngay">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Denngay</Prompt>
+    </ReportParameter>
     <ReportParameter Name="Thang">
       <DataType>Integer</DataType>
       <AllowBlank>true</AllowBlank>
@@ -275,7 +280,6 @@
         <Width>5.25cm</Width>
         <Style>
           <FontSize>8pt</FontSize>
-          <FontWeight>700</FontWeight>
           <TextAlign>Center</TextAlign>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -283,9 +287,9 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
         <ZIndex>14</ZIndex>
-        <Left>7cm</Left>
+        <Left>5.75cm</Left>
         <Height>0.63492cm</Height>
-        <Value>="Tuần từ " + Parameters!NgayLap.Value</Value>
+        <Value>="Tuần từ " + Parameters!NgayLap.Value + " đến " + Parameters!Denngay.Value</Value>
       </Textbox>
       <Textbox Name="textbox15">
         <Top>0.125cm</Top>
@@ -1200,7 +1204,7 @@
         <Filters>
           <Filter>
             <FilterExpression>=Fields!Thang.Value</FilterExpression>
-            <Operator>LessThan</Operator>
+            <Operator>LessThanOrEqual</Operator>
             <FilterValues>
               <FilterValue>=Parameters!Thang.Value</FilterValue>
             </FilterValues>
@@ -1334,7 +1338,11 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <CanGrow>true</CanGrow>
-                      <Value>=IIF(Fields!Thang.Value&lt;= 7,(formatnumber(Fields!DauKy.Value + Fields!PhatSinh.Value - Fields!DaTra.Value-Fields!LuyKe.Value,0)).Replace(",","."),iif(Fields!Thang.Value&gt;Parameters!Thang.Value,"",formatnumber(Fields!PhatSinh.Value-Fields!LuyKe.Value,0).Replace(",",".")))</Value>
+                      <Value>=IIF(Fields!Thang.Value&lt;= 7,
+(formatnumber(Fields!DauKy.Value + Fields!PhatSinh.Value -
+ Fields!DaTra.Value-Fields!LuyKe.Value,0)).Replace(",","."),
+ iif(Fields!Thang.Value&gt;Parameters!Thang.Value,"",
+ formatnumber(Fields!PhatSinh.Value-Fields!LuyKe.Value,0).Replace(",",".")))</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1479,7 +1487,9 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(sum(cdbl(Fields!DauKy.Value) + cdbl(Fields!PhatSinh.Value) - cdbl(Fields!DaTra.Value))-sum(Fields!LuyKe.Value) +Sum(Fields!PhatSinh1.Value, "BRDataSet_dsBaoCaoTuan_Tong"),0).Replace(",",".")</Value>
+                      <Value>=formatnumber(sum(cdbl(Fields!DauKy.Value) + 
+cdbl(Fields!PhatSinh.Value) - cdbl(Fields!DaTra.Value))-
+sum(Fields!LuyKe.Value),0).Replace(",",".")</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
