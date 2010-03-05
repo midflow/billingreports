@@ -11,9 +11,9 @@
     <div>    
 
     
-        <rsweb:ReportViewer ID="rptKiemkeNo1" runat="server"  Width="100%" Height="580px">
-        </rsweb:ReportViewer>
-
+        <rsweb:ReportViewer ID="rptKiemKeNo1" runat="server" Width="100%" Height="580px">
+        </rsweb:ReportViewer>   
+    
     
     </div>
     </form>

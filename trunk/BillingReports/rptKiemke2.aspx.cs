@@ -62,11 +62,11 @@ public partial class rptKiemke2 : System.Web.UI.Page
         rds.Value = ds.Tables["dsKiemKeNo2"];
         ReportParameter[] rppDate = new ReportParameter[1];
         rppDate[0] = new ReportParameter("NgayLap", Convert.ToDateTime(Request.Params["NgayThang"]).ToString("dd/MM/yyyy"));
-        rptKiemkeNo1.LocalReport.ReportPath = "rptKiemKe2.rdlc";
-        rptKiemkeNo1.LocalReport.DataSources.Clear();
-        rptKiemkeNo1.LocalReport.DataSources.Add(rds);
-        rptKiemkeNo1.LocalReport.SetParameters(rppDate);
-        rptKiemkeNo1.LocalReport.Refresh();
+        rptKiemKeNo1.LocalReport.ReportPath = "rptKiemKe2.rdlc";
+        rptKiemKeNo1.LocalReport.DataSources.Clear();
+        rptKiemKeNo1.LocalReport.DataSources.Add(rds);
+        rptKiemKeNo1.LocalReport.SetParameters(rppDate);
+        rptKiemKeNo1.LocalReport.Refresh();
     }
     private Int64 GetNo(string strdk)
     {
