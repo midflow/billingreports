@@ -22,97 +22,9 @@
   <rd:SnapToGrid>true</rd:SnapToGrid>
   <RightMargin>0.5in</RightMargin>
   <LeftMargin>0.5in</LeftMargin>
-  <PageHeader>
-    <PrintOnFirstPage>true</PrintOnFirstPage>
-    <ReportItems>
-      <Textbox Name="textbox2">
-        <rd:DefaultName>textbox2</rd:DefaultName>
-        <Top>0.25in</Top>
-        <Width>2in</Width>
-        <Style>
-          <FontWeight>700</FontWeight>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-        <ZIndex>4</ZIndex>
-        <CanGrow>true</CanGrow>
-        <Height>0.25in</Height>
-        <Value>Viễn thông tỉnh Bình Dương</Value>
-      </Textbox>
-      <Textbox Name="textbox1">
-        <rd:DefaultName>textbox1</rd:DefaultName>
-        <Width>3.25in</Width>
-        <Style>
-          <FontWeight>700</FontWeight>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-        <ZIndex>3</ZIndex>
-        <CanGrow>true</CanGrow>
-        <Height>0.25in</Height>
-        <Value>TẬP ĐOÀN BƯU CHÍNH VIỄN THÔNG VIỆT NAM</Value>
-      </Textbox>
-      <Textbox Name="textbox182">
-        <Top>2.22222cm</Top>
-        <Width>4.44445cm</Width>
-        <Style>
-          <FontWeight>700</FontWeight>
-          <TextAlign>Left</TextAlign>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-        <ZIndex>2</ZIndex>
-        <CanGrow>true</CanGrow>
-        <Left>10.79365cm</Left>
-        <Height>0.19688in</Height>
-        <Value>=Parameters!NgayLap.Value</Value>
-      </Textbox>
-      <Textbox Name="textbox16">
-        <Top>2.22222cm</Top>
-        <Width>2.77778cm</Width>
-        <Style>
-          <FontWeight>700</FontWeight>
-          <TextAlign>Center</TextAlign>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-        <ZIndex>1</ZIndex>
-        <CanGrow>true</CanGrow>
-        <Left>7.93651cm</Left>
-        <Height>0.19688in</Height>
-        <Value>Tại thời điểm </Value>
-      </Textbox>
-      <Textbox Name="textbox7">
-        <Top>1.5873cm</Top>
-        <Width>5.75in</Width>
-        <Style>
-          <FontWeight>700</FontWeight>
-          <TextAlign>Center</TextAlign>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-        <CanGrow>true</CanGrow>
-        <Left>3.80952cm</Left>
-        <Height>0.63492cm</Height>
-        <Value>BÁO CÁO KIỂM KÊ NỢ PHẢI THU KHÁCH HÀNG SỬ DỤNG DỊCH VỤ VT-CNTT</Value>
-      </Textbox>
-    </ReportItems>
-    <Height>1.375in</Height>
-    <PrintOnLastPage>true</PrintOnLastPage>
-  </PageHeader>
   <BottomMargin>0.25in</BottomMargin>
   <rd:ReportID>48d297e2-61f6-4d27-93f7-a767e535e89f</rd:ReportID>
-  <PageWidth>11in</PageWidth>
+  <PageWidth>21cm</PageWidth>
   <DataSets>
     <DataSet Name="BRDataSet_dsKiemKeNo2">
       <Fields>
@@ -169,13 +81,102 @@
     </DataSet>
   </DataSets>
   <Code />
-  <Width>9.13438in</Width>
+  <Width>16.8254cm</Width>
   <Body>
     <ReportItems>
+      <Textbox Name="textbox2">
+        <rd:DefaultName>textbox2</rd:DefaultName>
+        <Top>0.375in</Top>
+        <Width>2in</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>12</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>Viễn thông tỉnh Bình Dương</Value>
+      </Textbox>
+      <Textbox Name="textbox1">
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Top>0.31746cm</Top>
+        <Width>3.25in</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>11</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>TẬP ĐOÀN BƯU CHÍNH VIỄN THÔNG VIỆT NAM</Value>
+      </Textbox>
+      <Textbox Name="textbox182">
+        <Top>2.53968cm</Top>
+        <Width>4.44445cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>10</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>7.93651cm</Left>
+        <Height>0.19688in</Height>
+        <Value>=Parameters!NgayLap.Value</Value>
+      </Textbox>
+      <Textbox Name="textbox16">
+        <Top>2.53968cm</Top>
+        <Width>2.77778cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>9</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>5.07937cm</Left>
+        <Height>0.19688in</Height>
+        <Value>Tại thời điểm </Value>
+      </Textbox>
+      <Textbox Name="textbox7">
+        <Top>1.90476cm</Top>
+        <Width>5.75in</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>8</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.95238cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>BÁO CÁO KIỂM KÊ NỢ PHẢI THU KHÁCH HÀNG SỬ DỤNG DỊCH VỤ VT-CNTT</Value>
+      </Textbox>
       <Textbox Name="textbox19">
-        <Top>5.71429cm</Top>
+        <Top>10.15873cm</Top>
         <Width>3.38492cm</Width>
         <Style>
+          <FontSize>8pt</FontSize>
           <TextAlign>Center</TextAlign>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -189,9 +190,10 @@
         <Value>Người lập biểu</Value>
       </Textbox>
       <Textbox Name="textbox20">
-        <Top>5.71429cm</Top>
+        <Top>10.15873cm</Top>
         <Width>2.53968cm</Width>
         <Style>
+          <FontSize>8pt</FontSize>
           <TextAlign>Center</TextAlign>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -200,13 +202,15 @@
         </Style>
         <ZIndex>6</ZIndex>
         <CanGrow>true</CanGrow>
-        <Left>6.98413cm</Left>
+        <Left>4.44444cm</Left>
         <Height>0.63492cm</Height>
         <Value>Kế toán trưởng</Value>
       </Textbox>
       <Textbox Name="textbox21">
-        <Top>4.84657cm</Top>
+        <Top>9.29101cm</Top>
+        <Width>7.61905cm</Width>
         <Style>
+          <FontSize>8pt</FontSize>
           <TextAlign>Center</TextAlign>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -215,13 +219,15 @@
         </Style>
         <ZIndex>5</ZIndex>
         <CanGrow>true</CanGrow>
-        <Left>12.69841cm</Left>
+        <Left>8.25397cm</Left>
         <Height>0.63492cm</Height>
-        <Value>Bình Dương, ngày                tháng           năm 2009</Value>
+        <Value>Bình Dương, ngày                 tháng           năm 2009</Value>
       </Textbox>
       <Textbox Name="textbox78">
-        <Top>5.71429cm</Top>
+        <Top>10.15873cm</Top>
+        <Width>7.61905cm</Width>
         <Style>
+          <FontSize>8pt</FontSize>
           <FontWeight>700</FontWeight>
           <TextAlign>Center</TextAlign>
           <PaddingLeft>2pt</PaddingLeft>
@@ -231,12 +237,12 @@
         </Style>
         <ZIndex>4</ZIndex>
         <CanGrow>true</CanGrow>
-        <Left>12.69841cm</Left>
+        <Left>8.25397cm</Left>
         <Height>0.63492cm</Height>
         <Value>Thủ trưởng đơn vị</Value>
       </Textbox>
       <Textbox Name="textbox22">
-        <Top>6.35451cm</Top>
+        <Top>10.79895cm</Top>
         <Width>3.38492cm</Width>
         <Style>
           <FontStyle>Italic</FontStyle>
@@ -252,7 +258,7 @@
         <Value>(Ký, ghi rõ họ tên)</Value>
       </Textbox>
       <Textbox Name="textbox23">
-        <Top>6.35451cm</Top>
+        <Top>10.79895cm</Top>
         <Width>3.38492cm</Width>
         <Style>
           <FontStyle>Italic</FontStyle>
@@ -265,11 +271,11 @@
         </Style>
         <ZIndex>2</ZIndex>
         <CanGrow>true</CanGrow>
-        <Left>6.44841cm</Left>
+        <Left>3.90872cm</Left>
         <Value>(Ký, ghi rõ họ tên)</Value>
       </Textbox>
       <Textbox Name="textbox24">
-        <Top>6.35451cm</Top>
+        <Top>10.79895cm</Top>
         <Width>3.38492cm</Width>
         <Style>
           <FontStyle>Italic</FontStyle>
@@ -282,12 +288,12 @@
         </Style>
         <ZIndex>1</ZIndex>
         <CanGrow>true</CanGrow>
-        <Left>16.50793cm</Left>
+        <Left>10.15873cm</Left>
         <Value>(Ký, ghi rõ họ tên)</Value>
       </Textbox>
       <Table Name="table1">
         <DataSetName>BRDataSet_dsKiemKeNo2</DataSetName>
-        <Width>23.1746cm</Width>
+        <Top>4.44444cm</Top>
         <Details>
           <TableRows>
             <TableRow>
@@ -303,6 +309,7 @@
                           <Top>Dotted</Top>
                           <Bottom>Dotted</Bottom>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -326,6 +333,7 @@
                           <Top>Dotted</Top>
                           <Bottom>Dotted</Bottom>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -348,6 +356,7 @@
                           <Top>Dotted</Top>
                           <Bottom>Dotted</Bottom>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -370,6 +379,7 @@
                           <Top>Dotted</Top>
                           <Bottom>Dotted</Bottom>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -393,6 +403,7 @@
                           <Top>Dotted</Top>
                           <Bottom>Dotted</Bottom>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -416,6 +427,7 @@
                           <Top>Dotted</Top>
                           <Bottom>Dotted</Bottom>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -439,6 +451,7 @@
                           <Top>Dotted</Top>
                           <Bottom>Dotted</Bottom>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -462,6 +475,7 @@
                           <Top>Dotted</Top>
                           <Bottom>Dotted</Bottom>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -480,11 +494,13 @@
                       <rd:DefaultName>textbox6</rd:DefaultName>
                       <Style>
                         <BorderStyle>
-                          <Left>Solid</Left>
+                          <Default>Solid</Default>
+                          <Left>None</Left>
                           <Right>Solid</Right>
                           <Top>Dotted</Top>
                           <Bottom>Dotted</Bottom>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -506,6 +522,9 @@
             </SortBy>
           </Sorting>
         </Details>
+        <Style>
+          <FontSize>8pt</FontSize>
+        </Style>
         <Header>
           <TableRows>
             <TableRow>
@@ -521,6 +540,7 @@
                           <Top>Solid</Top>
                           <Bottom>None</Bottom>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -543,6 +563,7 @@
                           <Top>Solid</Top>
                           <Bottom>None</Bottom>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -565,6 +586,7 @@
                           <Top>Solid</Top>
                           <Bottom>None</Bottom>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -586,6 +608,7 @@
                           <Default>Solid</Default>
                           <Left>None</Left>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -606,6 +629,7 @@
                           <Default>Solid</Default>
                           <Left>None</Left>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -633,6 +657,7 @@
                           <Top>None</Top>
                           <Bottom>None</Bottom>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -655,6 +680,7 @@
                           <Top>None</Top>
                           <Bottom>None</Bottom>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -677,6 +703,7 @@
                           <Top>None</Top>
                           <Bottom>None</Bottom>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -697,6 +724,7 @@
                           <Default>Solid</Default>
                           <Left>None</Left>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -717,6 +745,7 @@
                           <Default>Solid</Default>
                           <Left>None</Left>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -737,6 +766,7 @@
                           <Default>Solid</Default>
                           <Left>None</Left>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -757,6 +787,7 @@
                           <Default>Solid</Default>
                           <Left>None</Left>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -776,6 +807,7 @@
                           <Default>Solid</Default>
                           <Left>None</Left>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -795,7 +827,9 @@
                         <BorderStyle>
                           <Default>Solid</Default>
                           <Left>None</Left>
+                          <Right>Solid</Right>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -820,6 +854,7 @@
                         <BorderStyle>
                           <Default>Solid</Default>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -840,6 +875,7 @@
                           <Default>Solid</Default>
                           <Left>None</Left>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -860,6 +896,7 @@
                           <Default>Solid</Default>
                           <Left>None</Left>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -880,6 +917,7 @@
                           <Default>Solid</Default>
                           <Left>None</Left>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -900,6 +938,7 @@
                           <Default>Solid</Default>
                           <Left>None</Left>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -920,6 +959,7 @@
                           <Default>Solid</Default>
                           <Left>None</Left>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -940,6 +980,7 @@
                           <Default>Solid</Default>
                           <Left>None</Left>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -960,6 +1001,7 @@
                           <Default>Solid</Default>
                           <Left>None</Left>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -980,6 +1022,7 @@
                           <Default>Solid</Default>
                           <Left>None</Left>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -1007,6 +1050,7 @@
                           <Top>Dotted</Top>
                           <Bottom>Dotted</Bottom>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -1029,6 +1073,7 @@
                           <Top>Dotted</Top>
                           <Bottom>Dotted</Bottom>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1049,6 +1094,7 @@
                           <Top>Dotted</Top>
                           <Bottom>Dotted</Bottom>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -1070,6 +1116,7 @@
                           <Top>Dotted</Top>
                           <Bottom>Dotted</Bottom>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -1090,6 +1137,7 @@
                           <Top>Dotted</Top>
                           <Bottom>Dotted</Bottom>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -1110,6 +1158,7 @@
                           <Top>Dotted</Top>
                           <Bottom>Dotted</Bottom>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -1130,6 +1179,7 @@
                           <Top>Dotted</Top>
                           <Bottom>Dotted</Bottom>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -1150,6 +1200,7 @@
                           <Top>Dotted</Top>
                           <Bottom>Dotted</Bottom>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -1168,9 +1219,11 @@
                       <Style>
                         <BorderStyle>
                           <Default>Solid</Default>
+                          <Left>None</Left>
                           <Top>Dotted</Top>
                           <Bottom>Dotted</Bottom>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -1189,31 +1242,31 @@
         </Header>
         <TableColumns>
           <TableColumn>
+            <Width>0.25in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.625in</Width>
+          </TableColumn>
+          <TableColumn>
             <Width>0.375in</Width>
           </TableColumn>
           <TableColumn>
-            <Width>2.5in</Width>
+            <Width>0.875in</Width>
           </TableColumn>
           <TableColumn>
-            <Width>0.625in</Width>
+            <Width>0.8in</Width>
           </TableColumn>
           <TableColumn>
-            <Width>1in</Width>
+            <Width>0.8in</Width>
           </TableColumn>
           <TableColumn>
-            <Width>1in</Width>
+            <Width>0.8in</Width>
           </TableColumn>
           <TableColumn>
-            <Width>1in</Width>
+            <Width>0.8in</Width>
           </TableColumn>
           <TableColumn>
-            <Width>1in</Width>
-          </TableColumn>
-          <TableColumn>
-            <Width>1in</Width>
-          </TableColumn>
-          <TableColumn>
-            <Width>0.625in</Width>
+            <Width>0.3in</Width>
           </TableColumn>
         </TableColumns>
         <Height>4.44444cm</Height>
@@ -1232,6 +1285,7 @@
                           <Top>Dotted</Top>
                           <Bottom>Solid</Bottom>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -1255,6 +1309,7 @@
                           <Top>Dotted</Top>
                           <Bottom>Solid</Bottom>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1277,6 +1332,7 @@
                           <Top>Dotted</Top>
                           <Bottom>Solid</Bottom>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -1300,6 +1356,7 @@
                           <Top>Dotted</Top>
                           <Bottom>Solid</Bottom>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -1323,6 +1380,7 @@
                           <Top>Dotted</Top>
                           <Bottom>Solid</Bottom>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -1346,6 +1404,7 @@
                           <Top>Dotted</Top>
                           <Bottom>Solid</Bottom>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -1369,6 +1428,7 @@
                           <Top>Dotted</Top>
                           <Bottom>Solid</Bottom>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -1392,6 +1452,7 @@
                           <Top>Dotted</Top>
                           <Bottom>Solid</Bottom>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -1410,11 +1471,13 @@
                       <rd:DefaultName>textbox42</rd:DefaultName>
                       <Style>
                         <BorderStyle>
-                          <Left>Solid</Left>
+                          <Default>Solid</Default>
+                          <Left>None</Left>
                           <Right>Solid</Right>
                           <Top>Dotted</Top>
                           <Bottom>Solid</Bottom>
                         </BorderStyle>
+                        <FontSize>8pt</FontSize>
                         <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -1434,9 +1497,9 @@
         </Footer>
       </Table>
     </ReportItems>
-    <Height>2.75209in</Height>
+    <Height>4.50209in</Height>
   </Body>
   <Language>en-US</Language>
   <TopMargin>0.25in</TopMargin>
-  <PageHeight>8.5in</PageHeight>
+  <PageHeight>29.7cm</PageHeight>
 </Report>
