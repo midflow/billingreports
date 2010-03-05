@@ -10,6 +10,13 @@
     </DataSource>
   </DataSources>
   <InteractiveHeight>29.7cm</InteractiveHeight>
+  <ReportParameters>
+    <ReportParameter Name="NgayLap">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>NgayLap</Prompt>
+    </ReportParameter>
+  </ReportParameters>
   <rd:DrawGrid>true</rd:DrawGrid>
   <InteractiveWidth>21cm</InteractiveWidth>
   <rd:GridSpacing>0.25cm</rd:GridSpacing>
@@ -242,7 +249,7 @@
         <CanGrow>true</CanGrow>
         <Left>6.125cm</Left>
         <Height>0.63492cm</Height>
-        <Value>Tại thời điểm 30/6/2009</Value>
+        <Value>="Tại thời điểm " + Parameters!NgayLap.Value</Value>
       </Textbox>
       <Textbox Name="textbox9">
         <Top>4.75cm</Top>
