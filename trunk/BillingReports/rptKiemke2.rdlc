@@ -1124,7 +1124,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(sum(Fields!TongSo.Value)-last(Fields!TongSo.Value, "BRDataSet_dsKiemKeNo2"),0).Replace(",",".")</Value>
+                      <Value>=formatnumber(sum(cdbl(Fields!TongSo.Value))-last(cdbl(Fields!TongSo.Value), "BRDataSet_dsKiemKeNo2"),0).Replace(",",".")</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1145,7 +1145,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(sum(Fields!QuaHan1.Value)-last(Fields!QuaHan1.Value, "BRDataSet_dsKiemKeNo2"),0).Replace(",",".")</Value>
+                      <Value>=formatnumber(sum(cdbl(Fields!QuaHan1.Value))-last(cdbl(Fields!QuaHan1.Value), "BRDataSet_dsKiemKeNo2"),0).Replace(",",".")</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1166,7 +1166,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(sum(Fields!QuaHan2.Value)-last(Fields!QuaHan2.Value, "BRDataSet_dsKiemKeNo2"),0).Replace(",",".")</Value>
+                      <Value>=formatnumber(sum(cdbl(Fields!QuaHan2.Value))-last(cdbl(Fields!QuaHan2.Value), "BRDataSet_dsKiemKeNo2"),0).Replace(",",".")</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1187,7 +1187,8 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(sum(Fields!QuaHan3.Value)-last(Fields!QuaHan3.Value, "BRDataSet_dsKiemKeNo2"),0).Replace(",",".")</Value>
+                      <Value>=formatnumber(sum(cdbl(Fields!QuaHan3.Value))
+-last(cdbl(Fields!QuaHan3.Value), "BRDataSet_dsKiemKeNo2"),0).Replace(",",".")</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1208,7 +1209,8 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(sum(Fields!QuaHan4.Value)-last(Fields!QuaHan4.Value, "BRDataSet_dsKiemKeNo2"),0).Replace(",",".")</Value>
+                      <Value>=formatnumber(sum(cdbl(Fields!QuaHan4.Value))
+-last(cdbl(Fields!QuaHan4.Value), "BRDataSet_dsKiemKeNo2"),0).Replace(",",".")</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1365,7 +1367,7 @@
                       </Style>
                       <ZIndex>14</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(sum(Fields!TongSo.Value),0).Replace(",",".")</Value>
+                      <Value>=formatnumber(sum(cdbl(Fields!TongSo.Value)),0).Replace(",",".")</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1389,7 +1391,7 @@
                       </Style>
                       <ZIndex>13</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(sum(Fields!QuaHan1.Value),0).Replace(",",".")</Value>
+                      <Value>=formatnumber(sum(cdbl(Fields!QuaHan1.Value)),0).Replace(",",".")</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1413,7 +1415,7 @@
                       </Style>
                       <ZIndex>12</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(sum(Fields!QuaHan2.Value),0).Replace(",",".")</Value>
+                      <Value>=formatnumber(sum(cdbl(Fields!QuaHan2.Value)),0).Replace(",",".")</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1437,7 +1439,7 @@
                       </Style>
                       <ZIndex>11</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(sum(Fields!QuaHan3.Value),0).Replace(",",".")</Value>
+                      <Value>=formatnumber(sum(cdbl(Fields!QuaHan3.Value)),0).Replace(",",".")</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1461,7 +1463,7 @@
                       </Style>
                       <ZIndex>10</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(sum(Fields!QuaHan4.Value),0).Replace(",",".")</Value>
+                      <Value>=formatnumber(sum(cdbl(Fields!QuaHan4.Value)),0).Replace(",",".")</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
