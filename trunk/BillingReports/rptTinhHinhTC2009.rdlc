@@ -10,6 +10,18 @@
     </DataSource>
   </DataSources>
   <InteractiveHeight>30cm</InteractiveHeight>
+  <ReportParameters>
+    <ReportParameter Name="tungay">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>tungay</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="denngay">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>denngay</Prompt>
+    </ReportParameter>
+  </ReportParameters>
   <rd:DrawGrid>true</rd:DrawGrid>
   <InteractiveWidth>21.5cm</InteractiveWidth>
   <rd:GridSpacing>0.25cm</rd:GridSpacing>
@@ -493,7 +505,7 @@
                       </Style>
                       <ZIndex>19</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>Số đã thu được đến hết 31/12/2009</Value>
+                      <Value>="Số đã thu được đến hết " + Parameters!denngay.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -517,7 +529,7 @@
                       </Style>
                       <ZIndex>18</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>Số còn phải thu đến 31/12/2009</Value>
+                      <Value>="Số còn phải thu đến " + Parameters!denngay.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>

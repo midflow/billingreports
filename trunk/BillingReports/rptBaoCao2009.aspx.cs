@@ -33,12 +33,33 @@ public partial class rptBaoCao2009 : System.Web.UI.Page
         //string strNam2009 = "TinhTheoTuoiNoCacThang2009";
         //string strDoituong = "TinhTheoDoiTuong";
         //string strTinhTong = "TinhTongTheoTuoiNo";
-
-        string strphanloaiCT = "select * from tblbctuan where type=1 and cast(tungay as datetime)='2009'"; 
-        string strNam2009 = "select * from tblbctuan where type=2 and cast(tungay as datetime)='2009'";  
-        string strDoituong = "select * from tblbctuan where type=3 and cast(tungay as datetime)='2009'"; 
-        string strTinhTong = "select * from tblbctuan where type=0 and cast(tungay as datetime)='2009'"; 
+        string strphanloaiCT;
+        string strNam2009;
+        string strDoituong;
+        string strTinhTong;
         
+        if (Request.QueryString["id"] == "1")
+        {
+            strphanloaiCT = "select * from tblbctuan where type=1 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='31 Dec 2009'";
+            strNam2009 = "select * from tblbctuan where type=2 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='31 Dec 2009'";
+            strDoituong = "select * from tblbctuan where type=3 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='31 Dec 2009'";
+            strTinhTong = "select * from tblbctuan where type=0 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='31 Dec 2009'"; 
+        
+        }
+        else if (Request.QueryString["id"] == "2")
+        {
+            strphanloaiCT = "select * from tblbctuan where type=1 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='10 Feb 2010'";
+            strNam2009 = "select * from tblbctuan where type=2 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='10 Feb 2010'";
+            strDoituong = "select * from tblbctuan where type=3 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='10 Feb 2010'";
+            strTinhTong = "select * from tblbctuan where type=0 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='10 Feb 2010'";
+
+        }
+        else
+        {
+            return;
+        }
+
+       
         SqlCommand cmdPLCT = new SqlCommand(strphanloaiCT);
         cmdPLCT.Connection = con;
         cmdPLCT.CommandType = CommandType.Text;
@@ -105,12 +126,15 @@ public partial class rptBaoCao2009 : System.Web.UI.Page
         rptBaoCaoTuan1.LocalReport.DataSources.Add(rds);
         odPLCT.Close();
 
-        //ReportParameter[] rppDate = new ReportParameter[1];
-        //rppDate[0] = new ReportParameter("NgayLap", Convert.ToDateTime(Request.Params["NgayThang"]).ToString("dd/MM/yyyy"));
-        //rppDate[1] = new ReportParameter("DenNgay", Convert.ToDateTime(Request.Params["ToiNgay"]).ToString("dd/MM/yyyy"));
+        ReportParameter[] rppDate = new ReportParameter[2];
+        rppDate[0] = new ReportParameter("tungay", "01/01/2009");
+        if (Request.QueryString["id"]=="1") 
+            rppDate[1] = new ReportParameter("denngay", "31/12/2009");
+        else
+            rppDate[1] = new ReportParameter("denngay", "10/02/2010");
         //rppDate[0] = new ReportParameter("Thang", Convert.ToDateTime(Request.Params["ToiNgay"].ToString(), vn).AddMonths(-1).ToString("MM"));
         
-        //rptBaoCaoTuan1.LocalReport.SetParameters(rppDate);
+        rptBaoCaoTuan1.LocalReport.SetParameters(rppDate);
         rptBaoCaoTuan1.LocalReport.Refresh();
 
     }
