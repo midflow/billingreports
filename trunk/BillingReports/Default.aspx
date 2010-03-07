@@ -38,6 +38,15 @@
              
          <tr>
             <td>
+                &nbsp;</td>
+            <td>
+                <asp:RadioButton ID="rbBaoCao2009_2" runat="server" Text="Báo cáo năm 2009" GroupName="Baocao"
+                    oncheckedchanged="RadioButton1_CheckedChanged" />
+            &nbsp;(tính đến 10 tháng 2 năm 2010)</td>        
+        </tr>
+             
+         <tr>
+            <td>
                 </td>
             <td>
                 <asp:RadioButton ID="rbBaoCaoTuan2009" runat="server" 
