@@ -54,6 +54,13 @@ public partial class rptBaoCao2009 : System.Web.UI.Page
             strTinhTong = "select * from tblbctuan where type=0 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='10 Feb 2010'";
 
         }
+        else if (Request.QueryString["id"] == "3")
+        {
+            strphanloaiCT = "select * from tblbctuan where type=1 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='31 Mar 2010'";
+            strNam2009 = "select * from tblbctuan where type=2 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='31 Mar 2010'";
+            strDoituong = "select * from tblbctuan where type=3 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='31 Mar 2010'";
+            strTinhTong = "select * from tblbctuan where type=0 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='31 Mar 2010'";
+        }
         else
         {
             return;
@@ -130,8 +137,10 @@ public partial class rptBaoCao2009 : System.Web.UI.Page
         rppDate[0] = new ReportParameter("tungay", "01/01/2009");
         if (Request.QueryString["id"]=="1") 
             rppDate[1] = new ReportParameter("denngay", "31/12/2009");
-        else
+        else if (Request.QueryString["id"]=="2") 
             rppDate[1] = new ReportParameter("denngay", "10/02/2010");
+         else
+            rppDate[1] = new ReportParameter("denngay", "31/03/2010");
         //rppDate[0] = new ReportParameter("Thang", Convert.ToDateTime(Request.Params["ToiNgay"].ToString(), vn).AddMonths(-1).ToString("MM"));
         
         rptBaoCaoTuan1.LocalReport.SetParameters(rppDate);
@@ -158,7 +167,7 @@ public partial class rptBaoCao2009 : System.Web.UI.Page
                      " dbo.tblct ON dbo.tblstt.ID = dbo.tblct.ThueBaoID INNER JOIN " +
                      " dbo.tblctct ON dbo.tblct.ID = dbo.tblctct.CTID " +
                      " WHERE     (dbo.tblstt.TuoiNo between 1 and 7) AND (dbo.tblct.NgayCT between '" + strdtTTFrom + "' and '" + strdtTTTo + "')) as tt4";
-       
+
         SqlCommand cmdTrongtuan = new SqlCommand(strTrongTuan);
         cmdTrongtuan.Connection = con;
         con.Open();
@@ -170,13 +179,13 @@ public partial class rptBaoCao2009 : System.Web.UI.Page
         return dtTrongTuan;
     }
     private DataTable GetdtTrongTuan_Thang(string strdtTTFrom, string strdtTTTo, int tuoino)
-    { 
-         SqlConnection con = new SqlConnection();
+    {
+        SqlConnection con = new SqlConnection();
         con.ConnectionString = thisConnectionString;
         string strTrongTuan_Thang = "SELECT SUM(dbo.tblctct.Tien) as TrongTuan FROM dbo.tblstt INNER JOIN " +
                                     " dbo.tblct ON dbo.tblstt.ID = dbo.tblct.ThueBaoID INNER JOIN " +
                                     " dbo.tblctct ON dbo.tblct.ID = dbo.tblctct.CTID " +
-                                    " WHERE (tblct.NgayCT between '" + strdtTTFrom + "' and '" + strdtTTFrom  + "') and tblstt.tuoino = tuoino ";
+                                    " WHERE (tblct.NgayCT between '" + strdtTTFrom + "' and '" + strdtTTFrom + "') and tblstt.tuoino = tuoino ";
         SqlCommand cmdTrongtuan_Thang = new SqlCommand(strTrongTuan_Thang);
         cmdTrongtuan_Thang.Connection = con;
         con.Open();
@@ -208,7 +217,7 @@ public partial class rptBaoCao2009 : System.Web.UI.Page
                       " dbo.tblloaikh ON dbo.tblstt.KHID = dbo.tblloaikh.KHTDID INNER JOIN " +
                       " dbo.tblct ON dbo.tblstt.ID = dbo.tblct.ThueBaoID INNER JOIN " +
                       " dbo.tblctct ON dbo.tblct.ID = dbo.tblctct.CTID " +
-"WHERE     (dbo.tblloaikh.KHTDID = '"+KHID+"') AND (dbo.tblct.NgayCT BETWEEN '"+tungay+"' AND '"+dengay+"'))as DTNoTT";
+"WHERE     (dbo.tblloaikh.KHTDID = '" + KHID + "') AND (dbo.tblct.NgayCT BETWEEN '" + tungay + "' AND '" + dengay + "'))as DTNoTT";
         SqlCommand cmdDTNoTT = new SqlCommand(strDTNoTT);
         cmdDTNoTT.Connection = con;
         con.Open();
@@ -223,10 +232,10 @@ public partial class rptBaoCao2009 : System.Web.UI.Page
         return Convert.ToInt16(strNgaythang.Substring(3, 2));
     }
     private DataTable dtThang(int tuoino)
-    { 
+    {
         SqlConnection con = new SqlConnection();
         con.ConnectionString = thisConnectionString;
-        string strThang = "select sum(NoDK) as DauKy,sum(PS)as PhatSinh,sum(DT)as DaTra, sum(ConNo) As ConNo from tblstt where tuoino = '"+tuoino+"'";
+        string strThang = "select sum(NoDK) as DauKy,sum(PS)as PhatSinh,sum(DT)as DaTra, sum(ConNo) As ConNo from tblstt where tuoino = '" + tuoino + "'";
         SqlCommand cmdThang = new SqlCommand(strThang);
         cmdThang.Connection = con;
         con.Open();
@@ -237,7 +246,7 @@ public partial class rptBaoCao2009 : System.Web.UI.Page
         return dtThang;
     }
     private string getTuanTruoc(string strCurrentTime)
-    { 
+    {
         char splitter = '/';
         string[] arrinfo = new string[3];
         arrinfo = strCurrentTime.Split(splitter);
@@ -267,5 +276,5 @@ public partial class rptBaoCao2009 : System.Web.UI.Page
             }
         return kqtt = arrkq[0] + "/" + arrkq[1] + "/" + arrkq[2];
     }
-    
+
 }
