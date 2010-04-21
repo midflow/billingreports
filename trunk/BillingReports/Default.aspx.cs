@@ -39,6 +39,10 @@ public partial class _Default : System.Web.UI.Page
         {
             Response.Redirect("rptBaoCao2009.aspx?id=2");
         }
+        if (rbBaoCao2009_3.Checked)
+        {
+            Response.Redirect("rptBaoCao2009.aspx?id=3");
+        }
         if (rbKiemke1.Checked)
         {
             Response.Redirect("rptdkKiemke1.aspx");
