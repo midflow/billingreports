@@ -27,6 +27,10 @@ public partial class _Default : System.Web.UI.Page
         {
             Response.Redirect("rptdkBaoCaoTuan2010.aspx");
         }
+        if (rbBaoCaoTuan2010_gphone.Checked)
+        {
+            Response.Redirect("rptdkBaoCaoTuan2010_gphone.aspx");
+        }
         if (rbBaoCaoTuan2009.Checked)
         {
             Response.Redirect("rptdkBaoCaoTuan.aspx");
