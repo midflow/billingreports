@@ -37,13 +37,15 @@ public partial class rptBaoCao2009 : System.Web.UI.Page
         string strNam2009;
         string strDoituong;
         string strTinhTong;
+        string strnam2010;
         
         if (Request.QueryString["id"] == "1")
         {
             strphanloaiCT = "select * from tblbctuan where type=1 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='31 Dec 2009'";
             strNam2009 = "select * from tblbctuan where type=2 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='31 Dec 2009'";
             strDoituong = "select * from tblbctuan where type=3 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='31 Dec 2009'";
-            strTinhTong = "select * from tblbctuan where type=0 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='31 Dec 2009'"; 
+            strTinhTong = "select * from tblbctuan where type=0 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='31 Dec 2009'";
+            strnam2010 = "select * from tblbctuan where type=2 and nam=2010 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='31 Dec 2009'";
         
         }
         else if (Request.QueryString["id"] == "2")
@@ -52,7 +54,7 @@ public partial class rptBaoCao2009 : System.Web.UI.Page
             strNam2009 = "select * from tblbctuan where type=2 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='10 Feb 2010'";
             strDoituong = "select * from tblbctuan where type=3 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='10 Feb 2010'";
             strTinhTong = "select * from tblbctuan where type=0 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='10 Feb 2010'";
-
+            strnam2010 = "select * from tblbctuan where type=2 and nam=2010 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='10 Feb 2010'";
         }
         else if (Request.QueryString["id"] == "3")
         {
@@ -60,6 +62,7 @@ public partial class rptBaoCao2009 : System.Web.UI.Page
             strNam2009 = "select * from tblbctuan where type=2 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='31 Mar 2010'";
             strDoituong = "select * from tblbctuan where type=3 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='31 Mar 2010'";
             strTinhTong = "select * from tblbctuan where type=0 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='31 Mar 2010'";
+            strnam2010 = "select * from tblbctuan where type=2 and nam=2010 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='31 Mar 2010'";
         }
         else
         {
@@ -109,6 +112,7 @@ public partial class rptBaoCao2009 : System.Web.UI.Page
         cmdPLCT.CommandText = strTinhTong;
         if (con.State == ConnectionState.Closed) con.Open();
         
+
         odPLCT = cmdPLCT.ExecuteReader(CommandBehavior.CloseConnection);
         dtPLCT = new DataTable();
         dtPLCT.Load(odPLCT);
@@ -117,6 +121,22 @@ public partial class rptBaoCao2009 : System.Web.UI.Page
         rds.Value = dtPLCT;
         rptBaoCaoTuan1.LocalReport.DataSources.Add(rds);
         odPLCT.Close();
+        
+        // 2010         
+        cmdPLCT.CommandText = strnam2010;
+        if (con.State == ConnectionState.Closed) con.Open();
+        //cmdPLCT.Parameters.Add("@thangnam", SqlDbType.DateTime).Value =
+        //  Convert.ToDateTime(Request.Params["NgayThang"].ToString(), vn).AddMonths(-1).ToString("MMyyyy");
+
+        odPLCT = cmdPLCT.ExecuteReader(CommandBehavior.CloseConnection);
+        dtPLCT = new DataTable();
+        dtPLCT.Load(odPLCT);
+        rds = new ReportDataSource();
+        rds.Name = "BRDataSet_dsBaoCaoTuan12010";
+        rds.Value = dtPLCT;
+        rptBaoCaoTuan1.LocalReport.DataSources.Add(rds);
+        odPLCT.Close();
+
 
         // tinh theo doi tuong 
         cmdPLCT.CommandText = strDoituong;
