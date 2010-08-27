@@ -42,27 +42,29 @@ public partial class rptBaoCao2009 : System.Web.UI.Page
         if (Request.QueryString["id"] == "1")
         {
             strphanloaiCT = "select * from tblbctuan where type=1 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='31 Dec 2009'";
-            strNam2009 = "select * from tblbctuan where type=2 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='31 Dec 2009'";
+            strNam2009 = "select * from tblbctuan where type=2 and nam=2009 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='31 Dec 2009'";
             strDoituong = "select * from tblbctuan where type=3 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='31 Dec 2009'";
             strTinhTong = "select * from tblbctuan where type=0 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='31 Dec 2009'";
-            strnam2010 = "select * from tblbctuan where type=2 and nam=2010 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='31 Dec 2009'";
-        
+            strnam2010 = "select * from tblbctuan where type=2 and nam=2010 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='31 Dec 2010'";
+            rptBaoCaoTuan1.LocalReport.ReportPath = "rptTinhHinhTC2009.rdlc";
         }
         else if (Request.QueryString["id"] == "2")
         {
             strphanloaiCT = "select * from tblbctuan where type=1 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='10 Feb 2010'";
-            strNam2009 = "select * from tblbctuan where type=2 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='10 Feb 2010'";
+            strNam2009 = "select * from tblbctuan where type=2 and nam=2009 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='10 Feb 2010'";
             strDoituong = "select * from tblbctuan where type=3 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='10 Feb 2010'";
             strTinhTong = "select * from tblbctuan where type=0 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='10 Feb 2010'";
             strnam2010 = "select * from tblbctuan where type=2 and nam=2010 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='10 Feb 2010'";
+            rptBaoCaoTuan1.LocalReport.ReportPath = "rptTinhHinhTC20092.rdlc";
         }
         else if (Request.QueryString["id"] == "3")
         {
             strphanloaiCT = "select * from tblbctuan where type=1 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='31 Mar 2010'";
-            strNam2009 = "select * from tblbctuan where type=2 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='31 Mar 2010'";
+            strNam2009 = "select * from tblbctuan where type=2 and nam=2009 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='31 Mar 2010'";
             strDoituong = "select * from tblbctuan where type=3 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='31 Mar 2010'";
             strTinhTong = "select * from tblbctuan where type=0 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='31 Mar 2010'";
             strnam2010 = "select * from tblbctuan where type=2 and nam=2010 and cast(tungay as datetime)='01 Jan 2009' and cast(denngay as datetime)='31 Mar 2010'";
+            rptBaoCaoTuan1.LocalReport.ReportPath = "rptTinhHinhTC20092.rdlc";
         }
         else
         {
@@ -88,7 +90,7 @@ public partial class rptBaoCao2009 : System.Web.UI.Page
         ReportDataSource rds = new ReportDataSource();
         rds.Name = "BRDataSet_dsBaoCaoTuan";
         rds.Value = dtPLCT;
-        rptBaoCaoTuan1.LocalReport.ReportPath = "rptTinhHinhTC2009.rdlc";
+        
         rptBaoCaoTuan1.LocalReport.DataSources.Clear();
         rptBaoCaoTuan1.LocalReport.DataSources.Add(rds);
 

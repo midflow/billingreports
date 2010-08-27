@@ -275,452 +275,6 @@
   <Body>
     <ColumnSpacing>0.5cm</ColumnSpacing>
     <ReportItems>
-      <Table Name="table2">
-        <ZIndex>14</ZIndex>
-        <DataSetName>BRDataSet_dsBaoCaoTuan1</DataSetName>
-        <Filters>
-          <Filter>
-            <FilterExpression>=Fields!Thang.Value</FilterExpression>
-            <Operator>LessThanOrEqual</Operator>
-            <FilterValues>
-              <FilterValue>=Parameters!Thang.Value</FilterValue>
-            </FilterValues>
-          </Filter>
-          <Filter>
-            <FilterExpression>=Cint(Parameters!Thang.Value)</FilterExpression>
-            <Operator>NotEqual</Operator>
-            <FilterValues>
-              <FilterValue>=12</FilterValue>
-            </FilterValues>
-          </Filter>
-        </Filters>
-        <Top>8.14418cm</Top>
-        <Details>
-          <TableRows>
-            <TableRow>
-              <TableCells>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox45">
-                      <Style>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontSize>8pt</FontSize>
-                        <TextAlign>Left</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>8</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>=First(Fields!STT.Value)</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox46">
-                      <Style>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                          <Left>None</Left>
-                        </BorderStyle>
-                        <FontSize>8pt</FontSize>
-                        <TextAlign>Left</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>7</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>=Fields!ChiTieu.Value</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox85">
-                      <Style>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontSize>8pt</FontSize>
-                        <TextAlign>Right</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>3</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(Fields!PhatSinh.Value ,0).Replace(",",".")</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox51">
-                      <Style>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontSize>8pt</FontSize>
-                        <TextAlign>Right</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>2</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(Fields!TrongTuan.Value,0).Replace(",",".")</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox52">
-                      <Style>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontSize>8pt</FontSize>
-                        <TextAlign>Right</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>1</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(Fields!LuyKe.Value,0).Replace(",",".")</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox53">
-                      <Style>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontSize>8pt</FontSize>
-                        <TextAlign>Right</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(Fields!PhatSinh.Value- fields!LuyKe.Value,0).Replace(",",".")</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-              </TableCells>
-              <Height>0.63492cm</Height>
-            </TableRow>
-          </TableRows>
-        </Details>
-        <Style>
-          <FontSize>8pt</FontSize>
-        </Style>
-        <Header>
-          <TableRows>
-            <TableRow>
-              <TableCells>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox81">
-                      <Style>
-                        <BackgroundColor>White</BackgroundColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                          <Top>None</Top>
-                        </BorderStyle>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>700</FontWeight>
-                        <TextAlign>Left</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <CanGrow>true</CanGrow>
-                      <Value>2.4</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox82">
-                      <Style>
-                        <BackgroundColor>White</BackgroundColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                          <Left>None</Left>
-                          <Top>None</Top>
-                        </BorderStyle>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>700</FontWeight>
-                        <TextAlign>Left</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <CanGrow>true</CanGrow>
-                      <Value>Bưu điện phí ghi nợ năm 2010</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox84">
-                      <Style>
-                        <BackgroundColor>White</BackgroundColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                          <Top>None</Top>
-                        </BorderStyle>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>700</FontWeight>
-                        <TextAlign>Right</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(Sum(Fields!PhatSinh.Value)
-,0).Replace(",",".")</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox56">
-                      <Style>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                          <Top>None</Top>
-                        </BorderStyle>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>700</FontWeight>
-                        <TextAlign>Right</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>2</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(sum(Fields!TrongTuan.Value),0).Replace(",",".")</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox57">
-                      <Style>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                          <Top>None</Top>
-                        </BorderStyle>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>700</FontWeight>
-                        <TextAlign>Right</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>1</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(sum(Fields!LuyKe.Value),0).Replace(",",".")</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox58">
-                      <Style>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                          <Top>None</Top>
-                        </BorderStyle>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>700</FontWeight>
-                        <TextAlign>Right</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(sum(cdbl(Fields!PhatSinh.Value))-
-sum(Fields!LuyKe.Value),0).Replace(",",".")</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-              </TableCells>
-              <Height>0.63492cm</Height>
-            </TableRow>
-            <TableRow>
-              <TableCells>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox59">
-                      <rd:DefaultName>textbox59</rd:DefaultName>
-                      <Style>
-                        <BackgroundColor>White</BackgroundColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontSize>8pt</FontSize>
-                        <TextAlign>Left</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <CanGrow>true</CanGrow>
-                      <Value />
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox60">
-                      <rd:DefaultName>textbox60</rd:DefaultName>
-                      <Style>
-                        <BackgroundColor>White</BackgroundColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                          <Left>None</Left>
-                        </BorderStyle>
-                        <FontSize>8pt</FontSize>
-                        <TextAlign>Left</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <CanGrow>true</CanGrow>
-                      <Value>Trong đó</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox83">
-                      <rd:DefaultName>textbox83</rd:DefaultName>
-                      <Style>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontSize>8pt</FontSize>
-                        <TextAlign>Right</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <CanGrow>true</CanGrow>
-                      <Value />
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox65">
-                      <rd:DefaultName>textbox65</rd:DefaultName>
-                      <Style>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontSize>8pt</FontSize>
-                        <TextAlign>Right</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <CanGrow>true</CanGrow>
-                      <Value />
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox66">
-                      <rd:DefaultName>textbox66</rd:DefaultName>
-                      <Style>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontSize>8pt</FontSize>
-                        <TextAlign>Right</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <CanGrow>true</CanGrow>
-                      <Value />
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox67">
-                      <rd:DefaultName>textbox67</rd:DefaultName>
-                      <Style>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontSize>8pt</FontSize>
-                        <TextAlign>Right</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <CanGrow>true</CanGrow>
-                      <Value />
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-              </TableCells>
-              <Height>0.63492cm</Height>
-            </TableRow>
-          </TableRows>
-          <RepeatOnNewPage>true</RepeatOnNewPage>
-        </Header>
-        <TableColumns>
-          <TableColumn>
-            <Width>1cm</Width>
-          </TableColumn>
-          <TableColumn>
-            <Width>4cm</Width>
-          </TableColumn>
-          <TableColumn>
-            <Width>3cm</Width>
-          </TableColumn>
-          <TableColumn>
-            <Width>3cm</Width>
-          </TableColumn>
-          <TableColumn>
-            <Width>3cm</Width>
-          </TableColumn>
-          <TableColumn>
-            <Width>3cm</Width>
-          </TableColumn>
-        </TableColumns>
-        <Height>1.90476cm</Height>
-      </Table>
       <Textbox Name="textbox35">
         <Top>2.30291cm</Top>
         <Width>5.25cm</Width>
@@ -732,7 +286,7 @@ sum(Fields!LuyKe.Value),0).Replace(",",".")</Value>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
-        <ZIndex>13</ZIndex>
+        <ZIndex>14</ZIndex>
         <Left>5.75cm</Left>
         <Height>0.63492cm</Height>
         <Value>="Tuần từ " + Parameters!NgayLap.Value + " đến " + Parameters!Denngay.Value</Value>
@@ -749,7 +303,7 @@ sum(Fields!LuyKe.Value),0).Replace(",",".")</Value>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
-        <ZIndex>12</ZIndex>
+        <ZIndex>13</ZIndex>
         <CanGrow>true</CanGrow>
         <Height>0.625cm</Height>
         <Value>Tập đoàn Bưu chính viễn thông Việt Nam</Value>
@@ -766,7 +320,7 @@ sum(Fields!LuyKe.Value),0).Replace(",",".")</Value>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
-        <ZIndex>11</ZIndex>
+        <ZIndex>12</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>0.00001cm</Left>
         <Height>0.63492cm</Height>
@@ -784,7 +338,7 @@ sum(Fields!LuyKe.Value),0).Replace(",",".")</Value>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
-        <ZIndex>10</ZIndex>
+        <ZIndex>11</ZIndex>
         <CanGrow>true</CanGrow>
         <Height>0.69709cm</Height>
         <Value>Viễn thông tỉnh Bình Dương</Value>
@@ -801,7 +355,7 @@ sum(Fields!LuyKe.Value),0).Replace(",",".")</Value>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
-        <ZIndex>9</ZIndex>
+        <ZIndex>10</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>0.00133cm</Left>
         <Height>0.63492cm</Height>
@@ -819,7 +373,7 @@ sum(Fields!LuyKe.Value),0).Replace(",",".")</Value>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
-        <ZIndex>8</ZIndex>
+        <ZIndex>9</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>4.5cm</Left>
         <Height>0.63492cm</Height>
@@ -836,7 +390,7 @@ sum(Fields!LuyKe.Value),0).Replace(",",".")</Value>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
-        <ZIndex>7</ZIndex>
+        <ZIndex>8</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>8cm</Left>
         <Height>0.63492cm</Height>
@@ -854,7 +408,7 @@ sum(Fields!LuyKe.Value),0).Replace(",",".")</Value>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
-        <ZIndex>6</ZIndex>
+        <ZIndex>7</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>8.25cm</Left>
         <Height>0.63492cm</Height>
@@ -872,7 +426,7 @@ sum(Fields!LuyKe.Value),0).Replace(",",".")</Value>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
-        <ZIndex>5</ZIndex>
+        <ZIndex>6</ZIndex>
         <CanGrow>true</CanGrow>
         <Height>0.63492cm</Height>
         <Value>(Ghi rõ họ tên, SĐT liên hệ)</Value>
@@ -889,7 +443,7 @@ sum(Fields!LuyKe.Value),0).Replace(",",".")</Value>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
-        <ZIndex>4</ZIndex>
+        <ZIndex>5</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>11.75cm</Left>
         <Height>0.63492cm</Height>
@@ -906,13 +460,13 @@ sum(Fields!LuyKe.Value),0).Replace(",",".")</Value>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
-        <ZIndex>3</ZIndex>
+        <ZIndex>4</ZIndex>
         <Left>2.5cm</Left>
         <Height>0.63492cm</Height>
         <Value>(Ban hành kèm theo văn bản số: 74/KTTKTC ngày 11 tháng 01 năm 2010)</Value>
       </Textbox>
       <Table Name="table1">
-        <ZIndex>2</ZIndex>
+        <ZIndex>3</ZIndex>
         <DataSetName>BRDataSet_dsBaoCaoTuan</DataSetName>
         <Top>4cm</Top>
         <Details>
@@ -1645,7 +1199,7 @@ sum(Fields!LuyKe.Value),0).Replace(",",".")</Value>
         <Height>4.15476cm</Height>
       </Table>
       <Table Name="table4">
-        <ZIndex>1</ZIndex>
+        <ZIndex>2</ZIndex>
         <DataSetName>BRDataSet_dsBaoCaoTuan11</DataSetName>
         <Top>8.34126cm</Top>
         <Details>
@@ -1942,6 +1496,7 @@ sum(Fields!LuyKe.Value),0).Replace(",",".")</Value>
         <Height>1.26984cm</Height>
       </Table>
       <Table Name="table3">
+        <ZIndex>1</ZIndex>
         <DataSetName>BRDataSet_dsBaoCaoTuan1</DataSetName>
         <Top>8.15608cm</Top>
         <Style>
@@ -2764,6 +2319,451 @@ sum(Fields!LuyKe.Value),0).Replace(",",".")</Value>
           </TableColumn>
         </TableColumns>
         <Height>3.80952cm</Height>
+      </Table>
+      <Table Name="table2">
+        <DataSetName>BRDataSet_dsBaoCaoTuan1</DataSetName>
+        <Filters>
+          <Filter>
+            <FilterExpression>=Fields!Thang.Value</FilterExpression>
+            <Operator>LessThanOrEqual</Operator>
+            <FilterValues>
+              <FilterValue>=Parameters!Thang.Value</FilterValue>
+            </FilterValues>
+          </Filter>
+          <Filter>
+            <FilterExpression>=Cint(Parameters!Thang.Value)</FilterExpression>
+            <Operator>NotEqual</Operator>
+            <FilterValues>
+              <FilterValue>=12</FilterValue>
+            </FilterValues>
+          </Filter>
+        </Filters>
+        <Top>8.14418cm</Top>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox45">
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>8</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=First(Fields!STT.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox46">
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Left>None</Left>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>7</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ChiTieu.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox85">
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>3</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=formatnumber(Fields!PhatSinh.Value ,0).Replace(",",".")</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox51">
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>2</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=formatnumber(Fields!TrongTuan.Value,0).Replace(",",".")</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox52">
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>1</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=formatnumber(Fields!LuyKe.Value,0).Replace(",",".")</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox53">
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=formatnumber(Fields!PhatSinh.Value- fields!LuyKe.Value,0).Replace(",",".")</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.63492cm</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Style>
+          <FontSize>8pt</FontSize>
+        </Style>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox81">
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Top>None</Top>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>2.4</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox82">
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Left>None</Left>
+                          <Top>None</Top>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Bưu điện phí ghi nợ năm 2010</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox84">
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Top>None</Top>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=formatnumber(Sum(Fields!PhatSinh.Value)
+,0).Replace(",",".")</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox56">
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Top>None</Top>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>2</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=formatnumber(sum(Fields!TrongTuan.Value),0).Replace(",",".")</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox57">
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Top>None</Top>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>1</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=formatnumber(sum(Fields!LuyKe.Value),0).Replace(",",".")</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox58">
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Top>None</Top>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=formatnumber(sum(cdbl(Fields!PhatSinh.Value))-
+sum(Fields!LuyKe.Value),0).Replace(",",".")</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.63492cm</Height>
+            </TableRow>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox59">
+                      <rd:DefaultName>textbox59</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox60">
+                      <rd:DefaultName>textbox60</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Left>None</Left>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Trong đó</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox83">
+                      <rd:DefaultName>textbox83</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox65">
+                      <rd:DefaultName>textbox65</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox66">
+                      <rd:DefaultName>textbox66</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox67">
+                      <rd:DefaultName>textbox67</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.63492cm</Height>
+            </TableRow>
+          </TableRows>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>1cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>4cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>3cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>3cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>3cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>3cm</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>1.90476cm</Height>
       </Table>
     </ReportItems>
     <Height>14.75cm</Height>
