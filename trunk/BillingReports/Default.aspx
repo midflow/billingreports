@@ -33,7 +33,7 @@
             <td>
                 <asp:RadioButton ID="rbBaoCaoTuan2010_gphone" runat="server" 
                     Text="Báo cáo tuần gphone trong năm 2010" GroupName="Baocao"
-                    oncheckedchanged="RadioButton1_CheckedChanged" Checked="True" />
+                    oncheckedchanged="RadioButton1_CheckedChanged" />
             </td>        
         </tr>
              
