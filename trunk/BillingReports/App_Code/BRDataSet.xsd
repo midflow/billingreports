@@ -4,7 +4,7 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="BRConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BRConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.BRConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="BRConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="BRConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.BRConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbltuyenTableAdapter" GeneratorDataComponentClassName="tbltuyenTableAdapter" Name="tbltuyen" UserDataComponentName="tbltuyenTableAdapter">
@@ -209,6 +209,25 @@
               <xs:element name="QuaHan2" msprop:Generator_UserColumnName="QuaHan2" msprop:Generator_ColumnPropNameInRow="QuaHan2" msprop:Generator_ColumnVarNameInTable="columnQuaHan2" msprop:Generator_ColumnPropNameInTable="QuaHan2Column" type="xs:string" minOccurs="0" />
               <xs:element name="QuaHan3" msprop:Generator_UserColumnName="QuaHan3" msprop:Generator_ColumnPropNameInRow="QuaHan3" msprop:Generator_ColumnVarNameInTable="columnQuaHan3" msprop:Generator_ColumnPropNameInTable="QuaHan3Column" type="xs:string" minOccurs="0" />
               <xs:element name="QuaHan4" msprop:Generator_UserColumnName="QuaHan4" msprop:Generator_ColumnPropNameInRow="QuaHan4" msprop:Generator_ColumnVarNameInTable="columnQuaHan4" msprop:Generator_ColumnPropNameInTable="QuaHan4Column" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dsKiemKeNo21" msprop:Generator_UserTableName="dsKiemKeNo21" msprop:Generator_RowDeletedName="dsKiemKeNo21RowDeleted" msprop:Generator_RowChangedName="dsKiemKeNo21RowChanged" msprop:Generator_RowClassName="dsKiemKeNo21Row" msprop:Generator_RowChangingName="dsKiemKeNo21RowChanging" msprop:Generator_RowEvArgName="dsKiemKeNo21RowChangeEvent" msprop:Generator_RowEvHandlerName="dsKiemKeNo21RowChangeEventHandler" msprop:Generator_TableClassName="dsKiemKeNo21DataTable" msprop:Generator_TableVarName="tabledsKiemKeNo21" msprop:Generator_RowDeletingName="dsKiemKeNo21RowDeleting" msprop:Generator_TablePropName="dsKiemKeNo21">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="STT" msprop:Generator_UserColumnName="STT" msprop:Generator_ColumnVarNameInTable="columnSTT" msprop:Generator_ColumnPropNameInRow="STT" msprop:Generator_ColumnPropNameInTable="STTColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DoiTuong" msprop:Generator_UserColumnName="DoiTuong" msprop:Generator_ColumnPropNameInRow="DoiTuong" msprop:Generator_ColumnVarNameInTable="columnDoiTuong" msprop:Generator_ColumnPropNameInTable="DoiTuongColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="LoaiKhachHang" msdata:Caption="MaSo" msprop:Generator_UserColumnName="LoaiKhachHang" msprop:Generator_ColumnPropNameInRow="LoaiKhachHang" msprop:Generator_ColumnVarNameInTable="columnLoaiKhachHang" msprop:Generator_ColumnPropNameInTable="LoaiKhachHangColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="KhoanThu" msprop:Generator_UserColumnName="KhoanThu" msprop:Generator_ColumnVarNameInTable="columnKhoanThu" msprop:Generator_ColumnPropNameInRow="KhoanThu" msprop:Generator_ColumnPropNameInTable="KhoanThuColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MaSo" msprop:Generator_UserColumnName="MaSo" msprop:Generator_ColumnVarNameInTable="columnMaSo" msprop:Generator_ColumnPropNameInRow="MaSo" msprop:Generator_ColumnPropNameInTable="MaSoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Chuadenhan" msprop:Generator_UserColumnName="Chuadenhan" msprop:Generator_ColumnVarNameInTable="columnChuadenhan" msprop:Generator_ColumnPropNameInRow="Chuadenhan" msprop:Generator_ColumnPropNameInTable="ChuadenhanColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Denhan" msprop:Generator_UserColumnName="Denhan" msprop:Generator_ColumnVarNameInTable="columnDenhan" msprop:Generator_ColumnPropNameInRow="Denhan" msprop:Generator_ColumnPropNameInTable="DenhanColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Tongsoquahan" msprop:Generator_UserColumnName="Tongsoquahan" msprop:Generator_ColumnVarNameInTable="columnTongsoquahan" msprop:Generator_ColumnPropNameInRow="Tongsoquahan" msprop:Generator_ColumnPropNameInTable="TongsoquahanColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TongSo" msprop:Generator_UserColumnName="TongSo" msprop:Generator_ColumnVarNameInTable="columnTongSo" msprop:Generator_ColumnPropNameInRow="TongSo" msprop:Generator_ColumnPropNameInTable="TongSoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="QuaHan1" msprop:Generator_UserColumnName="QuaHan1" msprop:Generator_ColumnVarNameInTable="columnQuaHan1" msprop:Generator_ColumnPropNameInRow="QuaHan1" msprop:Generator_ColumnPropNameInTable="QuaHan1Column" type="xs:string" minOccurs="0" />
+              <xs:element name="QuaHan2" msprop:Generator_UserColumnName="QuaHan2" msprop:Generator_ColumnVarNameInTable="columnQuaHan2" msprop:Generator_ColumnPropNameInRow="QuaHan2" msprop:Generator_ColumnPropNameInTable="QuaHan2Column" type="xs:string" minOccurs="0" />
+              <xs:element name="QuaHan3" msprop:Generator_UserColumnName="QuaHan3" msprop:Generator_ColumnVarNameInTable="columnQuaHan3" msprop:Generator_ColumnPropNameInRow="QuaHan3" msprop:Generator_ColumnPropNameInTable="QuaHan3Column" type="xs:string" minOccurs="0" />
+              <xs:element name="QuaHan4" msprop:Generator_UserColumnName="QuaHan4" msprop:Generator_ColumnVarNameInTable="columnQuaHan4" msprop:Generator_ColumnPropNameInRow="QuaHan4" msprop:Generator_ColumnPropNameInTable="QuaHan4Column" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

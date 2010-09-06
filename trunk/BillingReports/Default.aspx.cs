@@ -55,5 +55,10 @@ public partial class _Default : System.Web.UI.Page
         {
             Response.Redirect("rptdkKiemke2.aspx");
         }
+        if (rbKiemke2_30062010.Checked)
+        {
+            Response.Redirect("rptdkKiemke2_30062010.aspx");
+        }
+
     }
 }
