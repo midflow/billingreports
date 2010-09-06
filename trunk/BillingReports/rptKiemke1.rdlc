@@ -792,7 +792,7 @@
                           </Style>
                           <ZIndex>29</ZIndex>
                           <CanGrow>true</CanGrow>
-                          <Value>=formatnumber(SUM(Fields!TongSo.Value),0).Replace(",",".")</Value>
+                          <Value>=formatnumber(SUM(cdbl(Fields!TongSo.Value)),0).Replace(",",".")</Value>
                         </Textbox>
                       </ReportItems>
                     </TableCell>
@@ -3210,7 +3210,7 @@
                       </Style>
                       <ZIndex>29</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(SUM(Fields!TongSo.Value),0).Replace(",",".")</Value>
+                      <Value>=formatnumber(SUM(cdbl(Fields!TongSo.Value)),0).Replace(",",".")</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>

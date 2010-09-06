@@ -91,6 +91,14 @@
             <td>
                 &nbsp;</td>
             <td>
+                <asp:RadioButton ID="rbKiemke2_30062010" Text="Bảng kiểm kê nợ loại 2" 
+                    GroupName="Baocao" runat="server" />
+            &nbsp;(30 tháng 6 năm 2010)</td>        
+        </tr>
+         <tr>
+            <td>
+                &nbsp;</td>
+            <td>
                 <asp:Button ID="btnChonBaoCao" runat="server" Text="Chọn báo cáo" 
                     onclick="btnChonBaoCao_Click" />
              </td>        
