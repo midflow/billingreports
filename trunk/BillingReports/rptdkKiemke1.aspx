@@ -68,13 +68,21 @@
             <td class="style2">
                 <asp:DropDownList ID="ddlHuyen" runat="server" Height="22px" Width="200px">
                     <asp:ListItem Value="0">Tất cả</asp:ListItem>
-                    <asp:ListItem Value="1">Thị xã Thủ Dầu Một</asp:ListItem>
-                    <asp:ListItem Value="3">Huyện Thuận An</asp:ListItem>
-                    <asp:ListItem Value="2">Huyện Dĩ An</asp:ListItem>
-                    <asp:ListItem Value="4">Huyện Bến Cát</asp:ListItem>
-                    <asp:ListItem Value="5">Huyện Dầu Tiếng</asp:ListItem>
-                    <asp:ListItem Value="6">Huyện Tân Uyên</asp:ListItem>
-                    <asp:ListItem Value="7">Huyện Phú Giáo</asp:ListItem>
+                    <asp:ListItem Value="1">BĐ Thị xã Thủ Dầu Một</asp:ListItem>
+                    <asp:ListItem Value="2">BĐ Huyện Thuận An</asp:ListItem>
+                    <asp:ListItem Value="3">BĐ Huyện Dĩ An</asp:ListItem>
+                    <asp:ListItem Value="4">BĐ Huyện Bến Cát</asp:ListItem>
+                    <asp:ListItem Value="5">BĐ Huyện Dầu Tiếng</asp:ListItem>
+                    <asp:ListItem Value="6">BĐ Huyện Tân Uyên</asp:ListItem>
+                    <asp:ListItem Value="7">BĐ Huyện Phú Giáo</asp:ListItem>
+                     <asp:ListItem Value="8">TTVT Thủ Dầu Một</asp:ListItem>
+                    <asp:ListItem Value="9">TTVT Huyện Thuận An</asp:ListItem>
+                    <asp:ListItem Value="10">TTVT Huyện Dĩ An</asp:ListItem>
+                    <asp:ListItem Value="11">TTVT Huyện Bến Cát</asp:ListItem>
+                    <asp:ListItem Value="12">TTVT Huyện Dầu Tiếng</asp:ListItem>
+                    <asp:ListItem Value="13">TTVT Huyện Tân Uyên</asp:ListItem>
+                    <asp:ListItem Value="14">TTVT Huyện Phú Giáo</asp:ListItem>
+                    <asp:ListItem Value="15">Trung Tâm  Dịch Vụ Khách Hàng</asp:ListItem>
                 </asp:DropDownList>
                 </td>        
         </tr>  
