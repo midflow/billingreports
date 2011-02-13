@@ -1002,7 +1002,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(first(Fields!LuyKe.Value, "BRDataSet_dsBaoCaoTuan_Tong"),0).Replace(",",".")</Value>
+                      <Value>=formatnumber(first(Fields!LuyKe.Value, "BRDataSet_dsBaoCaoTuan_Tong") - Sum(Fields!DauKy1.Value, "BRDataSet_dsBaoCaoTuan_Tong") + Sum(Fields!DaTra1.Value, "BRDataSet_dsBaoCaoTuan_Tong"),0).Replace(",",".")</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1024,8 +1024,10 @@
                       <CanGrow>true</CanGrow>
                       <Value>=formatnumber(Sum(Fields!PhatSinh1.Value, "BRDataSet_dsBaoCaoTuan_Tong")
 + first(Fields!DauKy.Value, "BRDataSet_dsBaoCaoTuan_Tong") 
++ first(Fields!DauKy1.Value, "BRDataSet_dsBaoCaoTuan_Tong") 
 + first(Fields!PhatSinh.Value, "BRDataSet_dsBaoCaoTuan_Tong") 
 - first(Fields!DaTra.Value, "BRDataSet_dsBaoCaoTuan_Tong")
+- first(Fields!DaTra1.Value, "BRDataSet_dsBaoCaoTuan_Tong")
 -first(Fields!LuyKe.Value, "BRDataSet_dsBaoCaoTuan_Tong"),0).Replace(",",".")</Value>
                     </Textbox>
                   </ReportItems>
@@ -1082,7 +1084,7 @@
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="textbox16">
+                    <Textbox Name="textbox34">
                       <Style>
                         <BackgroundColor>White</BackgroundColor>
                         <BorderStyle>
@@ -1127,7 +1129,7 @@
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="textbox40">
+                    <Textbox Name="textbox17">
                       <Style>
                         <BackgroundColor>White</BackgroundColor>
                         <BorderStyle>
@@ -1142,13 +1144,13 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(first(Fields!LuyKe.Value, "BRDataSet_dsBaoCaoTuan_Tong"),0).Replace(",",".")</Value>
+                      <Value>=formatnumber(first(Fields!LuyKe.Value, "BRDataSet_dsBaoCaoTuan_Tong") - Sum(Fields!DauKy1.Value, "BRDataSet_dsBaoCaoTuan_Tong") + Sum(Fields!DaTra1.Value, "BRDataSet_dsBaoCaoTuan_Tong"),0).Replace(",",".")</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="textbox43">
+                    <Textbox Name="textbox27">
                       <Style>
                         <BorderStyle>
                           <Default>Solid</Default>
@@ -1164,8 +1166,10 @@
                       <CanGrow>true</CanGrow>
                       <Value>=formatnumber(Sum(Fields!PhatSinh1.Value, "BRDataSet_dsBaoCaoTuan_Tong")
 + first(Fields!DauKy.Value, "BRDataSet_dsBaoCaoTuan_Tong") 
++ first(Fields!DauKy1.Value, "BRDataSet_dsBaoCaoTuan_Tong") 
 + first(Fields!PhatSinh.Value, "BRDataSet_dsBaoCaoTuan_Tong") 
 - first(Fields!DaTra.Value, "BRDataSet_dsBaoCaoTuan_Tong")
+- first(Fields!DaTra1.Value, "BRDataSet_dsBaoCaoTuan_Tong")
 -first(Fields!LuyKe.Value, "BRDataSet_dsBaoCaoTuan_Tong"),0).Replace(",",".")</Value>
                     </Textbox>
                   </ReportItems>
@@ -1303,7 +1307,7 @@
                       </Style>
                       <ZIndex>1</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(Fields!LuyKe.Value,0).Replace(",",".")</Value>
+                      <Value>=formatnumber(Fields!LuyKe.Value - Fields!DauKy1.Value + Fields!DaTra1.Value,0).Replace(",",".")</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1322,7 +1326,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(Fields!PhatSinh1.Value + Fields!DauKy.Value + Fields!PhatSinh.Value - Fields!DaTra.Value-Fields!LuyKe.Value,0).Replace(",",".")</Value>
+                      <Value>=formatnumber(Fields!PhatSinh1.Value + Fields!DauKy.Value+ Fields!DauKy1.Value + Fields!PhatSinh.Value - Fields!DaTra.Value  - Fields!DaTra1.Value -Fields!LuyKe.Value,0).Replace(",",".")</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1386,8 +1390,9 @@
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="textbox75">
+                    <Textbox Name="textbox40">
                       <Style>
+                        <BackgroundColor>White</BackgroundColor>
                         <BorderStyle>
                           <Default>Solid</Default>
                         </BorderStyle>
@@ -1399,9 +1404,10 @@
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>3</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(sum(cdbl(Fields!DauKy.Value) + cdbl(Fields!PhatSinh.Value) +cdbl(Fields!PhatSinh1.Value)- cdbl(Fields!DaTra.Value)),0).Replace(",",".")</Value>
+                      <Value>=formatnumber(Sum(Fields!DauKy.Value, "BRDataSet_dsBaoCaoTuan_Tong")
++Sum(Fields!PhatSinh.Value, "BRDataSet_dsBaoCaoTuan_Tong")+Sum(Fields!PhatSinh1.Value, "BRDataSet_dsBaoCaoTuan_Tong")
+-Sum(Fields!DaTra.Value, "BRDataSet_dsBaoCaoTuan_Tong"),0).Replace(",",".")</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1428,8 +1434,9 @@
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="textbox76">
+                    <Textbox Name="textbox36">
                       <Style>
+                        <BackgroundColor>White</BackgroundColor>
                         <BorderStyle>
                           <Default>Solid</Default>
                         </BorderStyle>
@@ -1441,15 +1448,14 @@
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>1</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(sum(Fields!LuyKe.Value),0).Replace(",",".")</Value>
+                      <Value>=formatnumber(first(Fields!LuyKe.Value, "BRDataSet_dsBaoCaoTuan_Tong") - Sum(Fields!DauKy1.Value, "BRDataSet_dsBaoCaoTuan_Tong") + Sum(Fields!DaTra1.Value, "BRDataSet_dsBaoCaoTuan_Tong"),0).Replace(",",".")</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="textbox80">
+                    <Textbox Name="textbox25">
                       <Style>
                         <BorderStyle>
                           <Default>Solid</Default>
@@ -1463,7 +1469,13 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(sum(cdbl(Fields!PhatSinh1.Value) + cdbl(Fields!DauKy.Value) + cdbl(Fields!PhatSinh.Value) - cdbl(Fields!DaTra.Value)-cdbl(Fields!LuyKe.Value)),0).Replace(",",".")</Value>
+                      <Value>=formatnumber(Sum(Fields!PhatSinh1.Value, "BRDataSet_dsBaoCaoTuan_Tong")
++ first(Fields!DauKy.Value, "BRDataSet_dsBaoCaoTuan_Tong") 
++ first(Fields!DauKy1.Value, "BRDataSet_dsBaoCaoTuan_Tong") 
++ first(Fields!PhatSinh.Value, "BRDataSet_dsBaoCaoTuan_Tong") 
+- first(Fields!DaTra.Value, "BRDataSet_dsBaoCaoTuan_Tong")
+- first(Fields!DaTra1.Value, "BRDataSet_dsBaoCaoTuan_Tong")
+-first(Fields!LuyKe.Value, "BRDataSet_dsBaoCaoTuan_Tong"),0).Replace(",",".")</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1598,12 +1610,11 @@
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="textbox71">
+                    <Textbox Name="textbox41">
                       <Style>
                         <BackgroundColor>White</BackgroundColor>
                         <BorderStyle>
                           <Default>Solid</Default>
-                          <Top>None</Top>
                         </BorderStyle>
                         <FontSize>8pt</FontSize>
                         <FontWeight>700</FontWeight>
@@ -1614,17 +1625,16 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(first(Fields!LuyKe.Value, "BRDataSet_dsBaoCaoTuan_Tong"),0).Replace(",",".")</Value>
+                      <Value>=formatnumber(first(Fields!LuyKe.Value, "BRDataSet_dsBaoCaoTuan_Tong") - Sum(Fields!DauKy1.Value, "BRDataSet_dsBaoCaoTuan_Tong") + Sum(Fields!DaTra1.Value, "BRDataSet_dsBaoCaoTuan_Tong"),0).Replace(",",".")</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="textbox36">
+                    <Textbox Name="textbox43">
                       <Style>
                         <BorderStyle>
                           <Default>Solid</Default>
-                          <Top>None</Top>
                         </BorderStyle>
                         <FontSize>8pt</FontSize>
                         <FontWeight>700</FontWeight>
@@ -1637,8 +1647,10 @@
                       <CanGrow>true</CanGrow>
                       <Value>=formatnumber(Sum(Fields!PhatSinh1.Value, "BRDataSet_dsBaoCaoTuan_Tong")
 + first(Fields!DauKy.Value, "BRDataSet_dsBaoCaoTuan_Tong") 
++ first(Fields!DauKy1.Value, "BRDataSet_dsBaoCaoTuan_Tong") 
 + first(Fields!PhatSinh.Value, "BRDataSet_dsBaoCaoTuan_Tong") 
 - first(Fields!DaTra.Value, "BRDataSet_dsBaoCaoTuan_Tong")
+- first(Fields!DaTra1.Value, "BRDataSet_dsBaoCaoTuan_Tong")
 -first(Fields!LuyKe.Value, "BRDataSet_dsBaoCaoTuan_Tong"),0).Replace(",",".")</Value>
                     </Textbox>
                   </ReportItems>
@@ -2221,8 +2233,9 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(Sum(Fields!PhatSinh1.Value+Fields!PhatSinh.Value+Fields!DauKy.Value-Fields!DaTra.Value, "BRDataSet_dsBaoCaoTuan_Tong")
-,0).Replace(",",".")</Value>
+                      <Value>=formatnumber(Sum(Fields!DauKy.Value, "BRDataSet_dsBaoCaoTuan_Tong")
++Sum(Fields!PhatSinh.Value, "BRDataSet_dsBaoCaoTuan_Tong")+Sum(Fields!PhatSinh1.Value, "BRDataSet_dsBaoCaoTuan_Tong")
+-Sum(Fields!DaTra.Value, "BRDataSet_dsBaoCaoTuan_Tong"),0).Replace(",",".")</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -2264,7 +2277,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(first(Fields!LuyKe.Value, "BRDataSet_dsBaoCaoTuan_Tong"),0).Replace(",",".")</Value>
+                      <Value>=formatnumber(first(Fields!LuyKe.Value, "BRDataSet_dsBaoCaoTuan_Tong") - Sum(Fields!DauKy1.Value, "BRDataSet_dsBaoCaoTuan_Tong") + Sum(Fields!DaTra1.Value, "BRDataSet_dsBaoCaoTuan_Tong"),0).Replace(",",".")</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -2286,8 +2299,10 @@
                       <CanGrow>true</CanGrow>
                       <Value>=formatnumber(Sum(Fields!PhatSinh1.Value, "BRDataSet_dsBaoCaoTuan_Tong")
 + first(Fields!DauKy.Value, "BRDataSet_dsBaoCaoTuan_Tong") 
++ first(Fields!DauKy1.Value, "BRDataSet_dsBaoCaoTuan_Tong") 
 + first(Fields!PhatSinh.Value, "BRDataSet_dsBaoCaoTuan_Tong") 
 - first(Fields!DaTra.Value, "BRDataSet_dsBaoCaoTuan_Tong")
+- first(Fields!DaTra1.Value, "BRDataSet_dsBaoCaoTuan_Tong")
 -first(Fields!LuyKe.Value, "BRDataSet_dsBaoCaoTuan_Tong"),0).Replace(",",".")</Value>
                     </Textbox>
                   </ReportItems>
@@ -2440,7 +2455,7 @@
                       </Style>
                       <ZIndex>1</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(Fields!LuyKe.Value,0).Replace(",",".")</Value>
+                      <Value>=formatnumber(Fields!LuyKe.Value-fields!DauKy.Value+fields!DaTra.Value,0).Replace(",",".")</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -2459,7 +2474,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(Fields!PhatSinh.Value- fields!LuyKe.Value,0).Replace(",",".")</Value>
+                      <Value>=formatnumber(Fields!PhatSinh.Value- fields!LuyKe.Value + fields!DauKy.Value - fields!DaTra.Value,0).Replace(",",".")</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -2538,8 +2553,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(Sum(Fields!PhatSinh.Value)
-,0).Replace(",",".")</Value>
+                      <Value>=formatnumber(Sum(Fields!PhatSinh.Value),0).Replace(",",".")</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -2583,7 +2597,7 @@
                       </Style>
                       <ZIndex>1</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=formatnumber(sum(Fields!LuyKe.Value),0).Replace(",",".")</Value>
+                      <Value>=formatnumber(sum(Fields!LuyKe.Value-fields!DauKy.Value + fields!DaTra.Value),0).Replace(",",".")</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -2605,7 +2619,7 @@
                       </Style>
                       <CanGrow>true</CanGrow>
                       <Value>=formatnumber(sum(cdbl(Fields!PhatSinh.Value))-
-sum(Fields!LuyKe.Value),0).Replace(",",".")</Value>
+sum(Fields!LuyKe.Value) + sum(fields!DauKy.Value) - sum(fields!DaTra.Value),0).Replace(",",".")</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
