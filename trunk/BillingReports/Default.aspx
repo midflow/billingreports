@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="Default.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="Default.aspx.cs" Inherits="_Default" Title="Báo cáo công nợ Tỉnh Bình Dương" %>
 
 <%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
 
@@ -16,14 +16,21 @@
             <td colspan=2>
                 Báo cáo công nợ Tỉnh Bình Dương</td>            
         </tr>
-             
+           <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                <asp:RadioButton ID="rbBaoCaoTuan2011" runat="server" 
+                    Text="Báo cáo tuần trong năm 2011" GroupName="Baocao" Checked="True" />
+            </td>        
+        </tr>  
          <tr>
             <td>
                 &nbsp;</td>
             <td>
                 <asp:RadioButton ID="rbBaoCaoTuan2010" runat="server" 
                     Text="Báo cáo tuần trong năm 2010" GroupName="Baocao"
-                    oncheckedchanged="RadioButton1_CheckedChanged" Checked="True" />
+                     Checked="True" />
             </td>        
         </tr>
              
@@ -33,7 +40,7 @@
             <td>
                 <asp:RadioButton ID="rbBaoCaoTuan2010_gphone" runat="server" 
                     Text="Báo cáo tuần gphone trong năm 2010" GroupName="Baocao"
-                    oncheckedchanged="RadioButton1_CheckedChanged" />
+                     />
             </td>        
         </tr>
              
@@ -42,7 +49,7 @@
             </td>
             <td>
                 <asp:RadioButton ID="rbBaoCao2009" runat="server" Text="Báo cáo năm 2009" GroupName="Baocao"
-                    oncheckedchanged="RadioButton1_CheckedChanged" />
+                     />
             </td>        
         </tr>
              
@@ -51,7 +58,7 @@
                 &nbsp;</td>
             <td>
                 <asp:RadioButton ID="rbBaoCao2009_2" runat="server" Text="Báo cáo năm 2009" GroupName="Baocao"
-                    oncheckedchanged="RadioButton1_CheckedChanged" />
+                     />
             &nbsp;(tính đến 10 tháng 2 năm 2010)</td>        
         </tr>
              
@@ -60,7 +67,7 @@
                 &nbsp;</td>
             <td>
                 <asp:RadioButton ID="rbBaoCao2009_3" runat="server" Text="Báo cáo năm 2009" GroupName="Baocao"
-                    oncheckedchanged="RadioButton1_CheckedChanged" />
+                     />
                 &nbsp;(tính đến 31 tháng 3 năm 2010)</td>        
         </tr>
              
@@ -70,7 +77,7 @@
             <td>
                 <asp:RadioButton ID="rbBaoCaoTuan2009" runat="server" 
                     Text="Báo cáo tuần trong năm 2009" GroupName="Baocao"
-                    oncheckedchanged="RadioButton1_CheckedChanged" />
+                     />
             </td>        
         </tr>
          <tr>

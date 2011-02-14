@@ -17,12 +17,14 @@ public partial class _Default : System.Web.UI.Page
     {
        
     }
-    protected void RadioButton1_CheckedChanged(object sender, EventArgs e)
-    {
-
-    }
+    
     protected void btnChonBaoCao_Click(object sender, EventArgs e)
     {
+
+        if (rbBaoCaoTuan2011.Checked)
+        {
+            Response.Redirect("rptdkBaoCaoTuan2011.aspx");
+        }
         if (rbBaoCaoTuan2010.Checked)
         {
             Response.Redirect("rptdkBaoCaoTuan2010.aspx");
