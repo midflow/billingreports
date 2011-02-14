@@ -1220,7 +1220,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <CanGrow>true</CanGrow>
-                      <Value>Dưới 1 năm</Value>
+                      <Value>6 tháng đến dưới 1 năm</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1241,7 +1241,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <CanGrow>true</CanGrow>
-                      <Value>Từ 1 năm đến 2 năm</Value>
+                      <Value>Từ 1 năm đến dưới 2 năm</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1262,7 +1262,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <CanGrow>true</CanGrow>
-                      <Value>Từ 2 năm đến 3 năm</Value>
+                      <Value>Từ 2 năm đến dưới 3 năm</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
