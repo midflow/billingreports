@@ -726,7 +726,7 @@
                       </Style>
                       <ZIndex>19</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>Số thu được lũy kế                    từ 01/01/2010 đến hết kỳ báo cáo</Value>
+                      <Value>Số thu được lũy kế                    từ 01/01/2011 đến hết kỳ báo cáo</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
