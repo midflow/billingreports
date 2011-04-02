@@ -24,6 +24,14 @@
                     Text="Báo cáo tuần trong năm 2011" GroupName="Baocao" Checked="True" />
             </td>        
         </tr>  
+           <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                <asp:RadioButton ID="rbBaoCaoTuan2011_1" runat="server" 
+                    Text="Báo cáo tuần trong năm 2011" GroupName="Baocao" />
+            &nbsp;(tính đến 28 tháng 2 năm 2011)</td>        
+        </tr>  
          <tr>
             <td>
                 &nbsp;</td>

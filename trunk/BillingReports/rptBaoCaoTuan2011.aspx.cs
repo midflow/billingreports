@@ -34,20 +34,38 @@ public partial class rptBaoCaoTuan2011 : System.Web.UI.Page
         //string strDoituong = "TinhTheoDoiTuong";
         //string strTinhTong = "TinhTongTheoTuoiNo";
 
-        string strphanloaiCT = "select * from tblbctuan where type=1 and cast(tungay as datetime)='" +
-            Convert.ToDateTime(Request.Params["NgayThang"].ToString()).ToString("dd MMM yyyy") + "'  and cast(denngay as datetime)='" +
-            Convert.ToDateTime(Request.Params["Toingay"].ToString()).ToString("dd MMM yyyy") + "'"; 
+        string strphanloaiCT;
+        string strNam2010;
+        string strDoituong;
+        string strTinhTong;
+        string strnam2010;
+
+        if (Request.QueryString["id"] == "0")
+        {
+            strphanloaiCT = "select * from tblbctuan where type=1 and cast(tungay as datetime)='" +
+                Convert.ToDateTime(Request.Params["NgayThang"].ToString()).ToString("dd MMM yyyy") + "'  and cast(denngay as datetime)='" +
+                Convert.ToDateTime(Request.Params["Toingay"].ToString()).ToString("dd MMM yyyy") + "'";
             //Convert.ToDateTime(Request.Params["NgayThang"].ToString(), vn).ToString("dd MMM yyyy") + "'"; 
-        string strNam2010 = "select * from tblbctuan where type=2 and cast(tungay as datetime)='" +
-            Convert.ToDateTime(Request.Params["NgayThang"].ToString(), vn).ToString("dd MMM yyyy") + "'  and cast(denngay as datetime)='" +
-            Convert.ToDateTime(Request.Params["Toingay"].ToString()).ToString("dd MMM yyyy") + "'";  
-        string strDoituong = "select * from tblbctuan where type=3 and cast(tungay as datetime)='" +
-            Convert.ToDateTime(Request.Params["NgayThang"].ToString(), vn).ToString("dd MMM yyyy") + "'  and cast(denngay as datetime)='" +
-            Convert.ToDateTime(Request.Params["Toingay"].ToString()).ToString("dd MMM yyyy") + "'"; 
-        string strTinhTong = "select * from tblbctuan where type=0 and cast(tungay as datetime)='" +
-            Convert.ToDateTime(Request.Params["NgayThang"].ToString(), vn).ToString("dd MMM yyyy") + "'  and cast(denngay as datetime)='" +
-            Convert.ToDateTime(Request.Params["Toingay"].ToString()).ToString("dd MMM yyyy") + "'"; 
-        
+            strNam2010 = "select * from tblbctuan where type=2 and cast(tungay as datetime)='" +
+                Convert.ToDateTime(Request.Params["NgayThang"].ToString(), vn).ToString("dd MMM yyyy") + "'  and cast(denngay as datetime)='" +
+                Convert.ToDateTime(Request.Params["Toingay"].ToString()).ToString("dd MMM yyyy") + "'";
+            strDoituong = "select * from tblbctuan where type=3 and cast(tungay as datetime)='" +
+                Convert.ToDateTime(Request.Params["NgayThang"].ToString(), vn).ToString("dd MMM yyyy") + "'  and cast(denngay as datetime)='" +
+                Convert.ToDateTime(Request.Params["Toingay"].ToString()).ToString("dd MMM yyyy") + "'";
+            strTinhTong = "select * from tblbctuan where type=0 and cast(tungay as datetime)='" +
+                Convert.ToDateTime(Request.Params["NgayThang"].ToString(), vn).ToString("dd MMM yyyy") + "'  and cast(denngay as datetime)='" +
+                Convert.ToDateTime(Request.Params["Toingay"].ToString()).ToString("dd MMM yyyy") + "'";
+            rptBaoCaoTuan1.LocalReport.ReportPath = "rptTinhHinhTC2010.rdlc";
+        }
+        else
+        {
+            strphanloaiCT = "select * from tblbctuan where type=1 and cast(tungay as datetime)='01 Jan 2010' and cast(denngay as datetime)='28 Feb 2011'";
+            //Convert.ToDateTime(Request.Params["NgayThang"].ToString(), vn).ToString("dd MMM yyyy") + "'"; 
+            strNam2010 = "select * from tblbctuan where type=2 and cast(tungay as datetime)='01 Jan 2010' and cast(denngay as datetime)='28 Feb 2011'";
+            strDoituong = "select * from tblbctuan where type=3 and cast(tungay as datetime)='01 Jan 2010' and cast(denngay as datetime)='28 Feb 2011'";
+            strTinhTong = "select * from tblbctuan where type=0 and cast(tungay as datetime)='01 Jan 2010' and cast(denngay as datetime)='28 Feb 2011'";
+            rptBaoCaoTuan1.LocalReport.ReportPath = "rptTinhHinhTC20102.rdlc";
+        }
         SqlCommand cmdPLCT = new SqlCommand(strphanloaiCT);
         cmdPLCT.Connection = con;
         cmdPLCT.CommandType = CommandType.Text;
@@ -66,7 +84,7 @@ public partial class rptBaoCaoTuan2011 : System.Web.UI.Page
         ReportDataSource rds = new ReportDataSource();
         rds.Name = "BRDataSet_dsBaoCaoTuan";
         rds.Value = dtPLCT;
-        rptBaoCaoTuan1.LocalReport.ReportPath = "rptTinhHinhTC2010.rdlc";
+        //rptBaoCaoTuan1.LocalReport.ReportPath = "rptTinhHinhTC2010.rdlc";
         rptBaoCaoTuan1.LocalReport.DataSources.Clear();
         rptBaoCaoTuan1.LocalReport.DataSources.Add(rds);
 
@@ -113,12 +131,19 @@ public partial class rptBaoCaoTuan2011 : System.Web.UI.Page
         rds.Value = dtPLCT;
         rptBaoCaoTuan1.LocalReport.DataSources.Add(rds);
         odPLCT.Close();
-
         ReportParameter[] rppDate = new ReportParameter[3];
-        rppDate[0] = new ReportParameter("NgayLap", Convert.ToDateTime(Request.Params["NgayThang"]).ToString("dd/MM/yyyy"));
-        rppDate[1] = new ReportParameter("Denngay", Convert.ToDateTime(Request.Params["ToiNgay"]).ToString("dd/MM/yyyy"));
-        rppDate[2] = new ReportParameter("Thang", Convert.ToDateTime(Request.Params["ToiNgay"].ToString(), vn).AddMonths(-1).ToString("MM"));
-        
+        if (Request.QueryString["id"] == "1")
+        {
+            rppDate[0] = new ReportParameter("NgayLap", "01/01/2010");
+            rppDate[1] = new ReportParameter("Denngay", "28/02/2011");
+            rppDate[2] = new ReportParameter("Thang", "12");
+        }
+        else
+        {            
+            rppDate[0] = new ReportParameter("NgayLap", Convert.ToDateTime(Request.Params["NgayThang"]).ToString("dd/MM/yyyy"));
+            rppDate[1] = new ReportParameter("Denngay", Convert.ToDateTime(Request.Params["ToiNgay"]).ToString("dd/MM/yyyy"));
+            rppDate[2] = new ReportParameter("Thang", Convert.ToDateTime(Request.Params["ToiNgay"].ToString(), vn).AddMonths(-1).ToString("MM"));
+        }
         rptBaoCaoTuan1.LocalReport.SetParameters(rppDate);
         rptBaoCaoTuan1.LocalReport.Refresh();
 
