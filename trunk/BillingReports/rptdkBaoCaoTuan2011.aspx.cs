@@ -17,6 +17,6 @@ public partial class rptdkBaoCaoTuan2011 : System.Web.UI.Page
     }
     protected void btnTaoBaoCao_Click(object sender, EventArgs e)
     {
-        Response.Redirect("rptBaoCaoTuan2011.aspx?NgayThang=" + ddIdentifyIssueDate.SelectedDate.Value.ToString("dd MMM yyyy") + "&ToiNgay=" + ddIdentifyIssueToDate.SelectedDate.Value.ToString("dd MMM yyyy"));
+        Response.Redirect("rptBaoCaoTuan2011.aspx?id=0&NgayThang=" + ddIdentifyIssueDate.SelectedDate.Value.ToString("dd MMM yyyy") + "&ToiNgay=" + ddIdentifyIssueToDate.SelectedDate.Value.ToString("dd MMM yyyy"));
     }
 }
