@@ -148,134 +148,134 @@ public partial class rptBaoCaoTuan2011 : System.Web.UI.Page
         rptBaoCaoTuan1.LocalReport.Refresh();
 
     }
-    private DataTable GetdtTrongTuan(string strdtTTFrom, string strdtTTTo)
-    {
-        SqlConnection con = new SqlConnection();
-        con.ConnectionString = thisConnectionString;
-        string strTrongTuan = "select (SELECT SUM(dbo.tblctct.Tien) FROM dbo.tblstt INNER JOIN " +
-                     " dbo.tblct ON dbo.tblstt.ID = dbo.tblct.ThueBaoID INNER JOIN " +
-                     " dbo.tblctct ON dbo.tblct.ID = dbo.tblctct.CTID " +
-                     " WHERE     (dbo.tblstt.TuoiNo >= 32) AND (dbo.tblct.NgayCT between '" + strdtTTFrom + "' and '" + strdtTTTo + "' )) as tt1," +
-                     " (SELECT     SUM(dbo.tblctct.Tien) FROM dbo.tblstt INNER JOIN " +
-                     " dbo.tblct ON dbo.tblstt.ID = dbo.tblct.ThueBaoID INNER JOIN " +
-                     " dbo.tblctct ON dbo.tblct.ID = dbo.tblctct.CTID " +
-                     " WHERE     (dbo.tblstt.TuoiNo between 20 and 31)" +
-                     " AND (dbo.tblct.NgayCT between '" + strdtTTFrom + "' and '" + strdtTTTo + "')) as tt2,(SELECT     SUM(dbo.tblctct.Tien) " +
-                     " FROM dbo.tblstt INNER JOIN dbo.tblct ON dbo.tblstt.ID = dbo.tblct.ThueBaoID " + " INNER JOIN  dbo.tblctct ON dbo.tblct.ID = dbo.tblctct.CTID " +
-                     " WHERE     (dbo.tblstt.TuoiNo between 8 and 19) AND " +
-                     " (dbo.tblct.NgayCT between '" + strdtTTFrom + "' and '" + strdtTTTo + "')) as tt3,(SELECT SUM(dbo.tblctct.Tien) " +
-                     " FROM         dbo.tblstt INNER JOIN " +
-                     " dbo.tblct ON dbo.tblstt.ID = dbo.tblct.ThueBaoID INNER JOIN " +
-                     " dbo.tblctct ON dbo.tblct.ID = dbo.tblctct.CTID " +
-                     " WHERE     (dbo.tblstt.TuoiNo between 1 and 7) AND (dbo.tblct.NgayCT between '" + strdtTTFrom + "' and '" + strdtTTTo + "')) as tt4";
+//    private DataTable GetdtTrongTuan(string strdtTTFrom, string strdtTTTo)
+//    {
+//        SqlConnection con = new SqlConnection();
+//        con.ConnectionString = thisConnectionString;
+//        string strTrongTuan = "select (SELECT SUM(dbo.tblctct.Tien) FROM dbo.tblstt INNER JOIN " +
+//                     " dbo.tblct ON dbo.tblstt.ID = dbo.tblct.ThueBaoID INNER JOIN " +
+//                     " dbo.tblctct ON dbo.tblct.ID = dbo.tblctct.CTID " +
+//                     " WHERE     (dbo.tblstt.TuoiNo >= 32) AND (dbo.tblct.NgayCT between '" + strdtTTFrom + "' and '" + strdtTTTo + "' )) as tt1," +
+//                     " (SELECT     SUM(dbo.tblctct.Tien) FROM dbo.tblstt INNER JOIN " +
+//                     " dbo.tblct ON dbo.tblstt.ID = dbo.tblct.ThueBaoID INNER JOIN " +
+//                     " dbo.tblctct ON dbo.tblct.ID = dbo.tblctct.CTID " +
+//                     " WHERE     (dbo.tblstt.TuoiNo between 20 and 31)" +
+//                     " AND (dbo.tblct.NgayCT between '" + strdtTTFrom + "' and '" + strdtTTTo + "')) as tt2,(SELECT     SUM(dbo.tblctct.Tien) " +
+//                     " FROM dbo.tblstt INNER JOIN dbo.tblct ON dbo.tblstt.ID = dbo.tblct.ThueBaoID " + " INNER JOIN  dbo.tblctct ON dbo.tblct.ID = dbo.tblctct.CTID " +
+//                     " WHERE     (dbo.tblstt.TuoiNo between 8 and 19) AND " +
+//                     " (dbo.tblct.NgayCT between '" + strdtTTFrom + "' and '" + strdtTTTo + "')) as tt3,(SELECT SUM(dbo.tblctct.Tien) " +
+//                     " FROM         dbo.tblstt INNER JOIN " +
+//                     " dbo.tblct ON dbo.tblstt.ID = dbo.tblct.ThueBaoID INNER JOIN " +
+//                     " dbo.tblctct ON dbo.tblct.ID = dbo.tblctct.CTID " +
+//                     " WHERE     (dbo.tblstt.TuoiNo between 1 and 7) AND (dbo.tblct.NgayCT between '" + strdtTTFrom + "' and '" + strdtTTTo + "')) as tt4";
        
-        SqlCommand cmdTrongtuan = new SqlCommand(strTrongTuan);
-        cmdTrongtuan.Connection = con;
-        con.Open();
-        cmdTrongtuan.CommandTimeout = 120000;
-        cmdTrongtuan.CommandType = CommandType.Text;
-        SqlDataReader odTrongtuan = cmdTrongtuan.ExecuteReader(CommandBehavior.CloseConnection);
-        DataTable dtTrongTuan = new DataTable();
-        dtTrongTuan.Load(odTrongtuan);
-        return dtTrongTuan;
-    }
-    private DataTable GetdtTrongTuan_Thang(string strdtTTFrom, string strdtTTTo, int tuoino)
-    { 
-         SqlConnection con = new SqlConnection();
-        con.ConnectionString = thisConnectionString;
-        string strTrongTuan_Thang = "SELECT SUM(dbo.tblctct.Tien) as TrongTuan FROM dbo.tblstt INNER JOIN " +
-                                    " dbo.tblct ON dbo.tblstt.ID = dbo.tblct.ThueBaoID INNER JOIN " +
-                                    " dbo.tblctct ON dbo.tblct.ID = dbo.tblctct.CTID " +
-                                    " WHERE (tblct.NgayCT between '" + strdtTTFrom + "' and '" + strdtTTFrom  + "') and tblstt.tuoino = tuoino ";
-        SqlCommand cmdTrongtuan_Thang = new SqlCommand(strTrongTuan_Thang);
-        cmdTrongtuan_Thang.Connection = con;
-        con.Open();
-        cmdTrongtuan_Thang.CommandType = CommandType.Text;
-        SqlDataReader odTrongtuan_Thang = cmdTrongtuan_Thang.ExecuteReader(CommandBehavior.CloseConnection);
-        DataTable dtTrongTuan_Thang = new DataTable();
-        dtTrongTuan_Thang.Load(odTrongtuan_Thang);
-        return dtTrongTuan_Thang;
-    }
-    private DataTable GetDoiTuongNo()
-    {
-        SqlConnection con = new SqlConnection();
-        con.ConnectionString = thisConnectionString;
-        string strTrongTuanDTNo = "SELECT DISTINCT dbo.tblloaikh.KHTD, SUM(dbo.tblstt.NODK) AS DauKy, SUM(dbo.tblstt.PS) AS PhatSinh, SUM(dbo.tblstt.DT) AS DaTra, SUM(dbo.tblstt.CONNO) as ConNo,dbo.tblloaikh.KHTDID AS KHID FROM dbo.tblstt INNER JOIN dbo.tblloaikh ON dbo.tblstt.KHID = dbo.tblloaikh.KHTDID GROUP BY dbo.tblloaikh.KHTD, dbo.tblloaikh.KHTDID";
-        SqlCommand cmdDTNoTT = new SqlCommand(strTrongTuanDTNo);
-        cmdDTNoTT.Connection = con;
-        con.Open();
-        cmdDTNoTT.CommandType = CommandType.Text;
-        SqlDataReader odDTNoTT = cmdDTNoTT.ExecuteReader(CommandBehavior.CloseConnection);
-        DataTable dtDTNoTT = new DataTable();
-        dtDTNoTT.Load(odDTNoTT);
-        return dtDTNoTT;
-    }
-    private DataTable GetDTNoTrongTuan(int KHID, string tungay, string dengay)
-    {
-        SqlConnection con = new SqlConnection();
-        con.ConnectionString = thisConnectionString;
-        string strDTNoTT = "select (SELECT     SUM(dbo.tblctct.Tien) FROM         dbo.tblstt INNER JOIN " +
-                      " dbo.tblloaikh ON dbo.tblstt.KHID = dbo.tblloaikh.KHTDID INNER JOIN " +
-                      " dbo.tblct ON dbo.tblstt.ID = dbo.tblct.ThueBaoID INNER JOIN " +
-                      " dbo.tblctct ON dbo.tblct.ID = dbo.tblctct.CTID " +
-"WHERE     (dbo.tblloaikh.KHTDID = '"+KHID+"') AND (dbo.tblct.NgayCT BETWEEN '"+tungay+"' AND '"+dengay+"'))as DTNoTT";
-        SqlCommand cmdDTNoTT = new SqlCommand(strDTNoTT);
-        cmdDTNoTT.Connection = con;
-        con.Open();
-        cmdDTNoTT.CommandType = CommandType.Text;
-        SqlDataReader odDTNoTT = cmdDTNoTT.ExecuteReader(CommandBehavior.CloseConnection);
-        DataTable dtDTNoTT = new DataTable();
-        dtDTNoTT.Load(odDTNoTT);
-        return dtDTNoTT;
-    }
-    private int getMonth(string strNgaythang) // voi ngay thang dinh dang dd/MM/yyyy
-    {
-        return Convert.ToInt16(strNgaythang.Substring(3, 2));
-    }
-    private DataTable dtThang(int tuoino)
-    { 
-        SqlConnection con = new SqlConnection();
-        con.ConnectionString = thisConnectionString;
-        string strThang = "select sum(NoDK) as DauKy,sum(PS)as PhatSinh,sum(DT)as DaTra, sum(ConNo) As ConNo from tblstt where tuoino = '"+tuoino+"'";
-        SqlCommand cmdThang = new SqlCommand(strThang);
-        cmdThang.Connection = con;
-        con.Open();
-        cmdThang.CommandType = CommandType.Text;
-        SqlDataReader odThang = cmdThang.ExecuteReader(CommandBehavior.CloseConnection);
-        DataTable dtThang = new DataTable();
-        dtThang.Load(odThang);
-        return dtThang;
-    }
-    private string getTuanTruoc(string strCurrentTime)
-    { 
-        char splitter = '/';
-        string[] arrinfo = new string[3];
-        arrinfo = strCurrentTime.Split(splitter);
-        string[] arrkq = new string[3];
-        string kqtt = "";
-        if (Convert.ToInt16(arrinfo[0]) > 7)
-        {
-            arrkq[0] = (Convert.ToInt16(arrinfo[0]) - 7).ToString();
-            arrkq[1] = arrinfo[1];
-            arrkq[2] = arrinfo[2];
-        }
-        else
-            if (Convert.ToInt16(arrinfo[0]) < 7)
-            {
-                if (Convert.ToInt16(arrinfo[1]) > 1)
-                {
-                    arrkq[1] = (Convert.ToInt16(arrinfo[1]) - 1).ToString();
-                    arrkq[2] = arrinfo[2];
-                    arrkq[0] = (Convert.ToInt16(arrinfo[0]) + 30 - 7).ToString();
-                }
-                else
-                {
-                    arrkq[2] = (Convert.ToInt32(arrinfo[2]) - 1).ToString();
-                    arrkq[1] = (12).ToString();
-                    arrkq[0] = (Convert.ToInt16(arrinfo[0]) + 30 - 7).ToString();
-                }
-            }
-        return kqtt = arrkq[0] + "/" + arrkq[1] + "/" + arrkq[2];
-    }
+//        SqlCommand cmdTrongtuan = new SqlCommand(strTrongTuan);
+//        cmdTrongtuan.Connection = con;
+//        con.Open();
+//        cmdTrongtuan.CommandTimeout = 120000;
+//        cmdTrongtuan.CommandType = CommandType.Text;
+//        SqlDataReader odTrongtuan = cmdTrongtuan.ExecuteReader(CommandBehavior.CloseConnection);
+//        DataTable dtTrongTuan = new DataTable();
+//        dtTrongTuan.Load(odTrongtuan);
+//        return dtTrongTuan;
+//    }
+//    private DataTable GetdtTrongTuan_Thang(string strdtTTFrom, string strdtTTTo, int tuoino)
+//    { 
+//         SqlConnection con = new SqlConnection();
+//        con.ConnectionString = thisConnectionString;
+//        string strTrongTuan_Thang = "SELECT SUM(dbo.tblctct.Tien) as TrongTuan FROM dbo.tblstt INNER JOIN " +
+//                                    " dbo.tblct ON dbo.tblstt.ID = dbo.tblct.ThueBaoID INNER JOIN " +
+//                                    " dbo.tblctct ON dbo.tblct.ID = dbo.tblctct.CTID " +
+//                                    " WHERE (tblct.NgayCT between '" + strdtTTFrom + "' and '" + strdtTTFrom  + "') and tblstt.tuoino = tuoino ";
+//        SqlCommand cmdTrongtuan_Thang = new SqlCommand(strTrongTuan_Thang);
+//        cmdTrongtuan_Thang.Connection = con;
+//        con.Open();
+//        cmdTrongtuan_Thang.CommandType = CommandType.Text;
+//        SqlDataReader odTrongtuan_Thang = cmdTrongtuan_Thang.ExecuteReader(CommandBehavior.CloseConnection);
+//        DataTable dtTrongTuan_Thang = new DataTable();
+//        dtTrongTuan_Thang.Load(odTrongtuan_Thang);
+//        return dtTrongTuan_Thang;
+//    }
+//    private DataTable GetDoiTuongNo()
+//    {
+//        SqlConnection con = new SqlConnection();
+//        con.ConnectionString = thisConnectionString;
+//        string strTrongTuanDTNo = "SELECT DISTINCT dbo.tblloaikh.KHTD, SUM(dbo.tblstt.NODK) AS DauKy, SUM(dbo.tblstt.PS) AS PhatSinh, SUM(dbo.tblstt.DT) AS DaTra, SUM(dbo.tblstt.CONNO) as ConNo,dbo.tblloaikh.KHTDID AS KHID FROM dbo.tblstt INNER JOIN dbo.tblloaikh ON dbo.tblstt.KHID = dbo.tblloaikh.KHTDID GROUP BY dbo.tblloaikh.KHTD, dbo.tblloaikh.KHTDID";
+//        SqlCommand cmdDTNoTT = new SqlCommand(strTrongTuanDTNo);
+//        cmdDTNoTT.Connection = con;
+//        con.Open();
+//        cmdDTNoTT.CommandType = CommandType.Text;
+//        SqlDataReader odDTNoTT = cmdDTNoTT.ExecuteReader(CommandBehavior.CloseConnection);
+//        DataTable dtDTNoTT = new DataTable();
+//        dtDTNoTT.Load(odDTNoTT);
+//        return dtDTNoTT;
+//    }
+//    private DataTable GetDTNoTrongTuan(int KHID, string tungay, string dengay)
+//    {
+//        SqlConnection con = new SqlConnection();
+//        con.ConnectionString = thisConnectionString;
+//        string strDTNoTT = "select (SELECT     SUM(dbo.tblctct.Tien) FROM         dbo.tblstt INNER JOIN " +
+//                      " dbo.tblloaikh ON dbo.tblstt.KHID = dbo.tblloaikh.KHTDID INNER JOIN " +
+//                      " dbo.tblct ON dbo.tblstt.ID = dbo.tblct.ThueBaoID INNER JOIN " +
+//                      " dbo.tblctct ON dbo.tblct.ID = dbo.tblctct.CTID " +
+//"WHERE     (dbo.tblloaikh.KHTDID = '"+KHID+"') AND (dbo.tblct.NgayCT BETWEEN '"+tungay+"' AND '"+dengay+"'))as DTNoTT";
+//        SqlCommand cmdDTNoTT = new SqlCommand(strDTNoTT);
+//        cmdDTNoTT.Connection = con;
+//        con.Open();
+//        cmdDTNoTT.CommandType = CommandType.Text;
+//        SqlDataReader odDTNoTT = cmdDTNoTT.ExecuteReader(CommandBehavior.CloseConnection);
+//        DataTable dtDTNoTT = new DataTable();
+//        dtDTNoTT.Load(odDTNoTT);
+//        return dtDTNoTT;
+//    }
+//    private int getMonth(string strNgaythang) // voi ngay thang dinh dang dd/MM/yyyy
+//    {
+//        return Convert.ToInt16(strNgaythang.Substring(3, 2));
+//    }
+//    private DataTable dtThang(int tuoino)
+//    { 
+//        SqlConnection con = new SqlConnection();
+//        con.ConnectionString = thisConnectionString;
+//        string strThang = "select sum(NoDK) as DauKy,sum(PS)as PhatSinh,sum(DT)as DaTra, sum(ConNo) As ConNo from tblstt where tuoino = '"+tuoino+"'";
+//        SqlCommand cmdThang = new SqlCommand(strThang);
+//        cmdThang.Connection = con;
+//        con.Open();
+//        cmdThang.CommandType = CommandType.Text;
+//        SqlDataReader odThang = cmdThang.ExecuteReader(CommandBehavior.CloseConnection);
+//        DataTable dtThang = new DataTable();
+//        dtThang.Load(odThang);
+//        return dtThang;
+//    }
+//    private string getTuanTruoc(string strCurrentTime)
+//    { 
+//        char splitter = '/';
+//        string[] arrinfo = new string[3];
+//        arrinfo = strCurrentTime.Split(splitter);
+//        string[] arrkq = new string[3];
+//        string kqtt = "";
+//        if (Convert.ToInt16(arrinfo[0]) > 7)
+//        {
+//            arrkq[0] = (Convert.ToInt16(arrinfo[0]) - 7).ToString();
+//            arrkq[1] = arrinfo[1];
+//            arrkq[2] = arrinfo[2];
+//        }
+//        else
+//            if (Convert.ToInt16(arrinfo[0]) < 7)
+//            {
+//                if (Convert.ToInt16(arrinfo[1]) > 1)
+//                {
+//                    arrkq[1] = (Convert.ToInt16(arrinfo[1]) - 1).ToString();
+//                    arrkq[2] = arrinfo[2];
+//                    arrkq[0] = (Convert.ToInt16(arrinfo[0]) + 30 - 7).ToString();
+//                }
+//                else
+//                {
+//                    arrkq[2] = (Convert.ToInt32(arrinfo[2]) - 1).ToString();
+//                    arrkq[1] = (12).ToString();
+//                    arrkq[0] = (Convert.ToInt16(arrinfo[0]) + 30 - 7).ToString();
+//                }
+//            }
+//        return kqtt = arrkq[0] + "/" + arrkq[1] + "/" + arrkq[2];
+//    }
     
 }
