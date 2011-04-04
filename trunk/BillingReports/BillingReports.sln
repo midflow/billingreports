@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "BillingReports", ".", "{7011D81A-8116-466A-A318-64D430C82782}"
 	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "Svn"
+		SccAuxPath = "Svn"
+		SccLocalPath = "Svn"
+		SccProvider = "SubversionScc"
 		TargetFramework = "2.0"
 		Debug.AspNetCompiler.VirtualPath = "/BillingReports"
 		Debug.AspNetCompiler.PhysicalPath = "..\BillingReports\"
